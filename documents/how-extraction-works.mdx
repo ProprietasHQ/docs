@@ -1,0 +1,38 @@
+---
+title: How Extraction Works
+description: Confidence, page citations, human review and why you can trust the output.
+---
+
+Reading a property document well is harder than it looks — scanned certificates, photographed leases, decades-old solicitor formatting. Proprietas handles them with a layered pipeline: **OCR** to recover text from scans and images, **machine-learning classification** to identify the document and route it, and **large-language-model extraction** to pull the structured fields — each one grounded in the source text and confidence-scored.
+
+It's built so you never have to take the output on faith. Three principles make the extraction trustworthy: **every figure is cited, confidence is surfaced, and anything uncertain waits for a human.**
+
+## Page Citations on Every Figure
+
+Each extracted value links back to the **page it came from**. Open a lease and every term date, break clause and rent figure carries a "see page 3" reference; click it and the source wording is highlighted in the PDF. Your legal team can spot-check a 30-page lease faster than it takes to make tea.
+
+This isn't decoration — a value whose source wording can't be found in the document is treated as a hallucination and dropped rather than shown.
+
+## Confidence Is Surfaced, Never Hidden
+
+Every extraction carries a confidence score, and it's **calibrated** — the raw model is over-confident, so Proprietas derates the score against observable signal quality (was the text clean or a noisy scan? is the address plausible?). You see a realistic number, not a flattering one.
+
+## The 0.85 Statutory Bar
+
+Statutory-compliance dates have a hard rule: **below a confidence of 0.85 they never auto-file** — they route to the [Inbox](/documents/intake) for a human to confirm. This is a fixed business policy, tuned for legal and liability reasons, not a model setting. The corollary: a confident-but-wrong date is a bug we fix by improving the parser, never by lowering the bar.
+
+## Clean Scans, Automatically
+
+If a document is a poor scan, Proprietas falls back to OCR and — when confidence is low or an address looks garbled — re-reads it with OCR forced, so a bad photocopy doesn't quietly produce a bad date.
+
+## You Never Pay Twice
+
+Every extraction is cached by the document's content and the schema it was read against. Upload the same PDF again and the result is served from cache — the same file is never re-charged against your AI usage.
+
+<Note>
+  Most documents are classified and read by deterministic logic with no external AI at all. Only where genuine extraction is needed does the **extracted text** — never the file or page images — go to the AI provider over an encrypted channel. See the [security posture](/security/overview).
+</Note>
+
+<Card title="Supported documents" icon="files" href="/documents/supported-documents">
+  Every document type Proprietas reads, and the fields it pulls.
+</Card>

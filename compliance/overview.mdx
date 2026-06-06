@@ -1,0 +1,49 @@
+---
+title: Compliance Overview
+description: How statutory compliance tracking works in Proprietas.
+---
+
+Compliance is the spine of Proprietas. Every site is measured against the UK statutory regimes that apply to it, and the system tells you exactly what's overdue, due soon and valid — with reminders that arrive before a deadline does.
+
+<Frame>
+  <img src="/images/site-compliance.jpg" alt="A site's compliance standing — every regime, colour-coded by status" />
+</Frame>
+
+## Regimes and Obligations
+
+When you create a workspace, Proprietas seeds the full catalog of UK statutory regimes — Fire Risk Assessment, legionella/L8, EICR, gas safety, LOLER, asbestos, PAT, EPC, F-Gas, TM44, fire alarm, emergency lighting, insurance certificates and more.
+
+Each **site × regime** produces a **compliance obligation** with a default frequency and a computed next-due date. Obligations carry one of four statuses:
+
+| Status | Meaning |
+| --- | --- |
+| **Valid** | A current certificate is on file |
+| **Due soon** | Inside the pre-expiry window |
+| **Overdue** | Past the due date with no fresh certificate |
+| **Expired** | The certificate's own expiry has passed |
+
+## Certificates
+
+Upload a certificate against an obligation — or just drag the PDF onto the page and let intake route it. Proprietas reads the document, confirms the type, inspector and expiry, and closes the obligation with the new date.
+
+<Note>
+  Statutory dates the parser isn't confident about are held for a human to confirm rather than auto-filed — so a low-confidence read never silently sets the wrong expiry.
+</Note>
+
+## Reminders
+
+Every obligation runs a pre-expiry workflow:
+
+- **Flags at 90, 60, 30 and 7 days** before expiry, by email and in-app.
+- At the **7-day** threshold, an automatic **work order** can be raised and routed to the right contractor with the existing certificate attached.
+- When the contractor uploads the new certificate through their portal, the obligation closes itself with the fresh expiry.
+
+You control which reminders reach you in **Settings → Notifications**.
+
+## Responsible Person
+
+Every site has a named **Responsible Person** from day one, reassignable in a click. Reminders and escalations route to them, not a shared inbox.
+
+## Audit Pack
+
+One click produces an **audit pack PDF** — the certificates, dates and history an inspector (Ofsted, CQC, DSPT, insurer) wants to see, ready to hand over.

@@ -1,0 +1,71 @@
+---
+title: Supported Documents
+description: Every document type Proprietas reads, and the fields it extracts.
+---
+
+Proprietas recognises and extracts structured data from the documents an estates team actually handles. Drop any of these and the right fields are pulled, page-cited, and filed.
+
+## Compliance Certificates
+
+All certificates share a common shape — issue date, expiry date, certificate number, inspector and inspecting body, outcome, and any findings.
+
+| Document | Pulls |
+| --- | --- |
+| Fire Risk Assessment (FRA) | Dates, risk level, findings with priority & deadline |
+| EICR (electrical) | Dates, inspector, C1/C2/C3 observations |
+| Gas Safety (CP12) | Dates, Gas Safe engineer & number |
+| L8 / Legionella risk assessment | Dates, risk level, monitoring actions |
+| Asbestos survey | Dates, register, re-inspection schedule |
+| PAT | Dates, appliance results |
+| LOLER report | Dates, examiner, defects |
+| EPC | Rating, dates |
+| F-Gas | Dates, refrigerant check |
+| TM44 air-conditioning | Dates, inspector |
+| Fire alarm certificate | Dates, system, defects |
+| Emergency lighting certificate | Dates, test result |
+| Fire extinguisher, sprinkler, dry riser | Dates, service result |
+| PSSR (pressure systems) | Dates, examiner |
+| DSEAR assessment | Dates, risk findings |
+| Insurance policy | Dates, cover type, amount |
+
+## Leases
+
+A full commercial lease yields the fields that matter for portfolio management, each page-cited:
+
+- **Term** — start, end, rent-commencement date (distinct, so rent-free periods are handled)
+- **Parties** — landlord, tenant, counterparty, other named parties
+- **Rent** — annual rent, currency, premium, VAT applicability
+- **Break clauses** — date, notice period, who may exercise
+- **Rent reviews** — date and basis (open-market, RPI, CPI, fixed)
+- **Service charge** — cap percentage and basis
+- **Repairing obligation** — FRI / IRI
+- **Alienation regime** — assignment / underletting rules
+- **LTA 1954 status** — security of tenure excluded vs retained
+- **Permitted use** — planning use class and reference
+- **Deposit** — amount and months covered
+- **Area** — square feet / metres
+- **Title number** — HM Land Registry
+
+See [Lease intelligence](/leases/lease-intelligence) for how this surfaces in the app.
+
+## Deeds & Transfers
+
+Lease-adjacent documents are read for their parties, effective date, premises and a plain-English summary of what they do:
+
+- Licence to alter
+- Deed of variation
+- Rent review memorandum
+- Assignment
+- Surrender
+- Wayleave
+- **TR1** (HM Land Registry transfer of whole) — with title number and consideration
+
+See [Deeds & transfers](/leases/deeds-and-transfers).
+
+## Other Documents
+
+Insurance policies, contractor registrations, meeting minutes, invoices, work-order reports and photo reports are recognised and filed; anything unrecognised is kept as a general document so nothing is lost.
+
+<Tip>
+  Want to feel the parser before you sign up? The free scanner at <a href="https://proprietas.app/try">proprietas.app/try</a> reads any UK certificate or lease — three scans a day, no signup, and the file is never stored.
+</Tip>

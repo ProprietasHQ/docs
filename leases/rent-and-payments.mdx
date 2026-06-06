@@ -1,0 +1,55 @@
+---
+title: Rent & Payments
+description: Rent schedules, inbound vs outbound, and overdue tracking.
+---
+
+When Proprietas reads a lease, it doesn't stop at the term dates — it builds the **rent schedule** and tracks every payment due, in or out.
+
+<Frame>
+  <img src="/images/rent.jpg" alt="The rent view — outgoing and incoming, with due pills and one-click Mark Paid" />
+</Frame>
+
+## Inbound and Outbound
+
+Every lease has a **direction**:
+
+- **Inbound** — you're the tenant; rent goes **out**.
+- **Outbound** — you're the landlord; rent comes **in**.
+
+The same system handles both, so a managing agent collecting rent and a trust paying ground rent see one consistent rent view.
+
+## How Schedules Are Built
+
+From the lease, Proprietas projects a rent schedule:
+
+- **Frequency** — monthly, quarterly (on the UK quarter days: 25 Mar, 24 Jun, 29 Sep, 25 Dec), annual, or a custom cadence
+- **Per-payment amount** — derived from the annual rent
+- **First due date** — anchored on the rent-commencement date, so a rent-free period at the start of a lease doesn't generate phantom early payments
+
+Payments are materialised ahead of time (about four months out) so upcoming dues are always visible, and the generation is idempotent — re-runs never double up a payment.
+
+<Note>
+  Payments are never generated for dates before your organisation joined Proprietas. Onboard mid-lease and you won't be greeted by months of historical "overdue" — only what's due from here.
+</Note>
+
+## Status and Overdue Tracking
+
+Each payment moves through a clear status:
+
+| Status | Meaning |
+| --- | --- |
+| Scheduled | Due in the future |
+| Due soon | Within 14 days |
+| Overdue | Past its due date, unpaid |
+| Paid | Marked paid, with who and when |
+| Waived / Disputed | Manually flagged |
+
+The Rent page leads with overdue first, then upcoming. Mark a payment paid in one click — with an optimistic confirmation — and record the method and reference. Overdue rent generates its own reminders, refreshed daily until it's cleared.
+
+## Rent Reviews and Breaks
+
+Upcoming **rent reviews** and **break dates** surface on the leases dashboard before they catch you out, each linked back to the clause in the original document.
+
+<Card title="Deeds & transfers" icon="scroll-text" href="/leases/deeds-and-transfers">
+  Variations, assignments, surrenders and TR1 transfers.
+</Card>

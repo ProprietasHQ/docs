@@ -1,0 +1,41 @@
+---
+title: Work Orders
+description: Schedule, tender, cost and close out contractor work.
+---
+
+A work order is a unit of work assigned to a contractor — a repair, a service, a compliance renewal. Proprietas tracks it from raised to paid.
+
+<Frame>
+  <img src="/images/work-order-detail.jpg" alt="A work order — stage tracker, tender gating, quotes, payments and the update thread" />
+</Frame>
+
+## Where Work Orders Come From
+
+- **Raised by hand** for any task
+- **Promoted from an [issue](/facilities/issues)** when a reported problem needs work
+- **Raised automatically** at the 7-day compliance threshold to renew a lapsing certificate (see [Reminders](/compliance/reminders))
+- **Raised on cadence** by a [PPM schedule](/compliance/planned-maintenance)
+
+Each carries a number (WO-0001), title, priority (low / medium / high / **emergency**) and status: **Open → Scheduled → In progress → On hold → Completed / Cancelled**.
+
+## Competence Gating
+
+When you assign a contractor, Proprietas checks their competence certificates (Gas Safe, NICEIC, SafeContractor, CHAS). If one has expired, the assignment can be **blocked until it's refreshed** — so an out-of-ticket contractor never ends up on a gas job. See [Contractors](/facilities/contractors).
+
+## Tendering and Quotes
+
+For organisations that need competitive quotes — charity trustees and MATs often do — a work order can require a **minimum number of quotes** before it's accepted. Contractors submit quotes; you accept one. Accepting below the quote threshold requires a written override reason, which is recorded.
+
+Multiple quotes live on the work order, with one accepted at a time; a superseded quote stays in the history.
+
+## Payments
+
+Log payments against a work order — deposit, milestone, final — each with amount, method, reference and an optional invoice. Payments can be voided without losing the audit history, so the financial trail is always intact.
+
+## Closing the Loop
+
+When work is done, the contractor marks it complete — often through the [portal](/facilities/contractor-portal) — uploads any certificate or report, and the linked issue or obligation updates. Every status change and comment is logged.
+
+<Card title="The contractor portal" icon="hard-hat" href="/facilities/contractor-portal">
+  How contractors do all this without an account.
+</Card>

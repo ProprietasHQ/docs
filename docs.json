@@ -1,14 +1,14 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "almond",
-  "name": "Product Guide",
-  "description": "Step-by-step guides for every product—platform setup, analytics, and integrations in one place.",
+  "theme": "mint",
+  "name": "Proprietas",
+  "description": "How to run statutory compliance, lease intelligence and facilities for your UK estate in Proprietas.",
   "colors": {
-    "primary": "#166E3F",
-    "light": "#26BD6C",
-    "dark": "#166E3F"
+    "primary": "#7A1F1F",
+    "light": "#C25B5B",
+    "dark": "#7A1F1F"
   },
-  "favicon": "/favicon.ico",
+  "favicon": "/favicon.svg",
   "icons": {
     "library": "lucide"
   },
@@ -16,62 +16,120 @@
     "eyebrows": "breadcrumbs"
   },
   "contextual": {
-    "options": ["copy", "view", "assistant", "mcp", "add-mcp"]
+    "options": ["copy", "view", "assistant"]
   },
   "navigation": {
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Home",
-          "icon": "house",
-          "href": "/"
-        },
-        {
-          "anchor": "Changelog",
-          "icon": "scroll-text",
-          "href": "https://www.mintlify.com/docs/changelog"
-        },
-        {
-          "anchor": "Help",
-          "icon": "life-buoy",
-          "href": "https://www.mintlify.com/docs/contact-support"
-        }
-      ]
-    },
-    "directory": "card",
-    "groups": [
+    "anchors": [
       {
-        "group": "Platform",
-        "icon": "layers",
-        "expanded": true,
-        "pages": [
-          "platform/quickstart",
-          "platform/key-concepts",
-          "platform/configuration/settings",
-          "platform/configuration/user-management",
-          "platform/administration/roles-permissions"
+        "anchor": "Overview",
+        "icon": "compass",
+        "groups": [
+          {
+            "group": "Welcome",
+            "icon": "book-open",
+            "pages": ["index", "overview/philosophy"]
+          },
+          {
+            "group": "Roadmap",
+            "icon": "map",
+            "pages": ["roadmap"]
+          }
         ]
       },
       {
-        "group": "Analytics",
-        "icon": "chart-bar",
-        "expanded": true,
-        "pages": [
-          "analytics/quickstart",
-          "analytics/connect-data",
-          "analytics/dashboards/create-dashboard",
-          "analytics/reports/scheduled-reports"
+        "anchor": "Guides",
+        "icon": "book-open",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "icon": "rocket",
+            "pages": [
+              "getting-started/introduction",
+              "getting-started/quickstart",
+              "getting-started/properties-and-scope"
+            ]
+          },
+          {
+            "group": "Compliance",
+            "icon": "shield-check",
+            "pages": [
+              "compliance/overview",
+              "compliance/certificates",
+              "compliance/reminders",
+              "compliance/planned-maintenance",
+              "compliance/audit-packs"
+            ]
+          },
+          {
+            "group": "Documents & AI",
+            "icon": "sparkles",
+            "pages": [
+              "documents/intake",
+              "documents/how-extraction-works",
+              "documents/supported-documents"
+            ]
+          },
+          {
+            "group": "Leases & Rent",
+            "icon": "file-text",
+            "pages": [
+              "leases/lease-intelligence",
+              "leases/rent-and-payments",
+              "leases/deeds-and-transfers"
+            ]
+          },
+          {
+            "group": "Facilities",
+            "icon": "wrench",
+            "pages": [
+              "facilities/issues",
+              "facilities/work-orders",
+              "facilities/contractors",
+              "facilities/contractor-portal"
+            ]
+          },
+          {
+            "group": "Members & Access",
+            "icon": "users",
+            "pages": [
+              "members/roles-and-invites",
+              "members/single-sign-on",
+              "members/access-requests"
+            ]
+          },
+          {
+            "group": "Billing",
+            "icon": "credit-card",
+            "pages": [
+              "billing/plans-and-ai-usage",
+              "billing/trials-and-lapses"
+            ]
+          },
+          {
+            "group": "Security",
+            "icon": "shield",
+            "pages": [
+              "security/overview",
+              "security/audit-trail"
+            ]
+          }
         ]
       },
       {
-        "group": "Integrations",
-        "icon": "plug",
-        "expanded": true,
-        "pages": [
-          "integrations/quickstart",
-          "integrations/authentication",
-          "integrations/connectors/crm",
-          "integrations/webhooks/configure"
+        "anchor": "Interface",
+        "icon": "layout-dashboard",
+        "groups": [
+          {
+            "group": "Using the App",
+            "icon": "layout-dashboard",
+            "pages": [
+              "interface/navigating",
+              "interface/search",
+              "interface/assistant",
+              "interface/notifications",
+              "interface/keyboard-shortcuts"
+            ]
+          }
         ]
       }
     ]
@@ -84,14 +142,13 @@
     "links": [],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Open Proprietas",
+      "href": "https://proprietas.app/login"
     }
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/yourcompany",
-      "linkedin": "https://linkedin.com/company/yourcompany"
+      "website": "https://proprietas.app"
     }
   }
 }

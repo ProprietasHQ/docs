@@ -1,0 +1,46 @@
+---
+title: Properties & Scope
+description: How sites, properties and the active property scope work.
+---
+
+Everything in Proprietas hangs off a **site**. Compliance obligations, leases, issues, work orders, documents and rent all attach to a site (or to a property within one). Get your sites right and the rest of the app organises itself.
+
+## Sites and Properties
+
+A **site** is a building or location you're responsible for. Sites come in two shapes:
+
+- **Standalone** — the site is the unit. A single school, office or shop. Every record attaches directly to it.
+- **Multi-property** — the site is a container for **properties** (floors, units, blocks). Exchange Tower's twelve floors are one site with twelve property scopes. Records can attach at the building level (a whole-building FRA) or the property level (a single tenant's lease).
+
+Each site carries a **type** (educational, office, care, healthcare, hotel, retail, residential, commercial) and a **tenure** (owned, leased, licensed, managed). The type drives which compliance regimes get seeded — see [Compliance](/compliance/overview).
+
+## Adding Properties
+
+<Steps>
+  <Step title="Let a document create it">
+    The quickest path: **drop a commercial lease** (or a whole folder of them). Proprietas reads the demised premises, derives the building address, and **creates the site automatically** — grouping a multi-floor building's leases into one site with a property per floor. Certificates do the same: drop a gas cert for a building you haven't added yet and the site is created to receive it.
+  </Step>
+  <Step title="Add one at a time">
+    Use **Add Property** from the Properties page (or the `+` on any page). Enter the address — Proprietas canonicalises it against the national address database so two spellings of the same building don't become two sites.
+  </Step>
+  <Step title="Bulk-add a portfolio">
+    Paste a list of addresses into **Bulk Add**. Each line is verified, de-duplicated by postcode, and multi-floor buildings are auto-grouped into one site with property children. Stand up a portfolio in minutes, not days.
+  </Step>
+  <Step title="Set the Responsible Person">
+    Every site has a named **Responsible Person** from day one — the individual reminders escalate to. Reassign it in a click.
+  </Step>
+</Steps>
+
+## The Active Property Scope
+
+The most important control in the app is the **property switcher** in the top bar. Proprietas is portfolio-wide by default, but pick a site (or a single floor) and the **entire app narrows to it** — dashboard, compliance, leases, rent, issues, work orders, documents, even the audit pack and public reporting link.
+
+<Note>
+  Your scope is remembered across reloads via a cookie. When a number surprises you, check the scope first — you may be looking at one floor rather than the whole estate.
+</Note>
+
+A clear **scope banner** ("Viewing Oakfield Primary — Show All Sites") sits under the page title whenever a scope is active, so you always know what you're looking at.
+
+<Card title="Next: Compliance" icon="shield-check" href="/compliance/overview">
+  See how regimes and obligations are seeded against your sites.
+</Card>

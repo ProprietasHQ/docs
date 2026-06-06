@@ -1,0 +1,41 @@
+---
+title: Security & Data Residency
+description: Where your data lives, how it's protected, and what we don't yet claim.
+---
+
+Estates compliance data sits next to legal and clinical data on the sensitivity register. Proprietas is built for that — and where we're not yet certified, we say so.
+
+## Where Your Data Lives
+
+- **Database** — hosted in the UK / EU
+- **Documents** — Cloudflare R2 (EU), served only through short-lived private links (about 15-minute expiry), never public URLs
+- **Backups** — daily, encrypted, retained 30 days, in-region
+
+A small number of sub-processors (AI extraction, billing, edge delivery) involve some US processing, all under EU Standard Contractual Clauses and the UK IDTA. Every third party that touches your data is listed on the public sub-processor page with its purpose, data categories and jurisdiction.
+
+## Encryption
+
+- **In transit** — TLS everywhere
+- **At rest** — sensitive personal data (tenant and counterparty details, contractor numbers) is encrypted at the **column level** with AES-256-GCM, beyond the disk-level encryption of the database itself
+
+## Tenant Isolation
+
+Every record carries an organisation ID, and every query is scoped to it. One customer's data is structurally invisible to another — enforced in the data layer, not by convention. It's plumbing, not policy.
+
+## Documents Parsed In-House
+
+PDF parsing, text extraction and OCR run on Proprietas infrastructure. Most documents are read by deterministic logic with **no external AI at all**. Only where genuine extraction is needed does the **extracted text** — never the file or page images — go to the AI provider over an encrypted channel; it's not trained on, and results are cached.
+
+## Accounts
+
+- **Multi-factor authentication** is supported and required for organisation admins
+- Sessions are httpOnly, secure, same-site cookies, revocable server-side and invalidated automatically when a user's role changes
+- Contractors and tenants see only their own data, enforced at the server guard layer
+
+## What We Don't Claim
+
+We are **not yet ISO 27001 certified** — and we won't claim a certificate we don't hold. The platform is built to ISO 27001-aligned controls and runs on infrastructure providers that are themselves ISO 27001 / SOC 2 certified. The full, current posture lives at <a href="https://proprietas.app/security">proprietas.app/security</a>.
+
+<Card title="The audit trail" icon="clipboard-list" href="/security/audit-trail">
+  Every change, logged with actor, before, after, IP and user-agent.
+</Card>

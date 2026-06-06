@@ -1,0 +1,54 @@
+---
+title: Single Sign-on
+description: Let your team sign in with your identity provider.
+---
+
+Single sign-on (SSO) lets people on your verified domain sign in through your identity provider — Google Workspace, Microsoft Entra or Okta — instead of email links. It's available on **Professional and Enterprise** tiers, configured under **Settings → SSO Domains**.
+
+<Note>
+  OIDC SSO is available on Professional and above. SAML and SCIM (automated provisioning) are Enterprise-only and on the [roadmap](/roadmap).
+</Note>
+
+## Set Up a Connection
+
+<Steps>
+  <Step title="Create an OAuth app in your IdP">
+    In your identity provider, create an OIDC / OAuth app. Add this **Redirect URL** (shown at the top of the SSO settings):
+
+    ```
+    https://proprietas.app/api/auth/callback/sso
+    ```
+
+    For Google Workspace, set the consent screen to **Internal** so it's scoped to your domain.
+  </Step>
+  <Step title="Enter the connection details">
+    In **Settings → SSO Domains**, fill in the **Issuer URL**, **Client ID** and **Client Secret** from your IdP. The provider chips fill the issuer for you:
+
+    | Provider | Issuer URL |
+    | --- | --- |
+    | Google | `https://accounts.google.com` |
+    | Microsoft Entra | `https://login.microsoftonline.com/<tenant>/v2.0` |
+    | Okta | `https://<your-org>.okta.com` |
+
+    Click **Create Connection**, then **Enable SSO**.
+  </Step>
+  <Step title="Verify your domain">
+    Under **Verified Domains**, claim your domain and add the **TXT record** shown (`_proprietas-verify.<domain>`) at your DNS host, then click **Verify**. Only verified domains route their users to SSO.
+  </Step>
+  <Step title="Sign in">
+    Sign out, go to [proprietas.app/login](https://proprietas.app/login) and enter a work email on the verified domain — you'll be sent to your IdP and back into the app.
+  </Step>
+</Steps>
+
+## Optional vs Enforced
+
+- **Enabled** — verified-domain users are routed to SSO, but a magic-link fallback stays available via `/login?recover=1` (your break-glass during rollout).
+- **Enforced** — magic-link sign-in is blocked for the domain; SSO becomes the only way in. Flip this on once you've confirmed a clean round-trip.
+
+## Role Mapping
+
+If your IdP sends group claims, map an IdP group to a Proprietas role under **Role Mapping**. Plain Google Workspace doesn't emit groups, so Google SSO users take the domain's default role (Editor) — SSO can never grant staff-level access.
+
+## New People from Your Domain
+
+When someone on your verified domain signs in via SSO but hasn't been invited, they're sent to a request-access screen rather than being let straight in. See [Access requests](/members/access-requests).

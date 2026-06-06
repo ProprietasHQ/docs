@@ -1,0 +1,44 @@
+---
+title: The Audit Trail
+description: An immutable record of every change — the product, not an add-on.
+---
+
+For an estates team, the audit trail isn't a feature — it's the deliverable. Insurance renewals, ISO 27001, Ofsted, CQC and DSPT all ask the same question: *who changed what, and when?* Proprietas answers it by default.
+
+<Frame>
+  <img src="/images/audit.jpg" alt="The audit log — every change with actor, time and context, filterable and exportable" />
+</Frame>
+
+## Logged by Default
+
+Every write to a compliance, lease, contractor, work-order, financial or membership record produces an **audit event** in the same database transaction as the change itself. If the change is saved, so is its record — they can't come apart.
+
+Each event captures:
+
+- **Actor** — the user (or the system, for automated jobs like reminders)
+- **Before** and **after** — snapshots of what changed
+- **IP** and **user-agent** — the request context
+- **Subject** — exactly which record was touched
+
+The log is **immutable** — events are written once and never edited or deleted.
+
+## What's Covered
+
+The audit trail spans the whole product — over a hundred event types — including:
+
+- Compliance: certificate uploaded, replaced, regime pack applied
+- Leases: uploaded, amended, break/review added or removed, deed created
+- Members: invited, accepted, role changed, join requested / approved / denied
+- Work orders: created, quoted, tender overridden, payment logged, completed via portal
+- Billing: subscription started, upgraded, downgraded, payment succeeded / failed
+- Contractors, properties, rent, documents, and data-rights actions (export, erasure)
+
+Even actions taken by contractors through the [portal](/facilities/contractor-portal) — who don't hold full accounts — are attributed and logged.
+
+## In the App
+
+The **Audit Log** (under Reports) is a read-only feed with filters for event kind, the record touched, the actor and a date range. It's exportable, so you can hand an inspector or insurer exactly the slice they asked for.
+
+<Note>
+  Audit history is retained for a minimum of seven years — aligned to insurance and statutory expectations.
+</Note>

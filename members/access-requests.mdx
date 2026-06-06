@@ -1,0 +1,27 @@
+---
+title: Access Requests
+description: Approve people from your domain who request to join.
+---
+
+When someone on your verified SSO domain signs in but hasn't been invited, Proprietas doesn't let them straight in — they land on a **request-access** screen and an admin approves them. It's the same pattern as Notion or Slack: your domain proves who they are, you decide whether they get a seat.
+
+## What the Requester Sees
+
+After signing in via SSO with no membership, they see *"Proprietas already has a workspace for your-domain.com — you haven't been invited yet"* and a **Request Access** button. Once they request, the screen shows a pending state. They can't see any of your data until you approve.
+
+<Note>
+  People you've already **invited** skip this entirely — an invite is pre-approval, so they join straight away.
+</Note>
+
+## Approving or Denying
+
+Admins handle requests in **Settings → Members → Pending Requests**:
+
+- A **badge** appears on the Settings sidebar entry and the Members tab when requests are waiting.
+- You also get a notification (and, if enabled, an email) — toggle these under **Settings → Notifications → Member requests**.
+- **Approve** with a role (defaults to Editor) — the person becomes a member and gets a "you're in" email.
+- **Deny** to decline silently.
+
+## Auto-Join (Optional)
+
+By default every verified domain is **request-to-join**. A domain can be switched to **auto-join** if you'd rather everyone on it become a member automatically — ask support to enable it for a domain.

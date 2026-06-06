@@ -1,0 +1,35 @@
+---
+title: Contractors
+description: Your contractor directory, competence certificates and scoping.
+---
+
+Contractors are the people who do the work. Proprietas keeps a directory of them, tracks their competence, and controls where they're visible.
+
+<Frame>
+  <img src="/images/contractors.jpg" alt="The contractor directory with trades and competence-certificate status" />
+</Frame>
+
+## The Directory
+
+Each contractor record holds the company details, trades (gas, electrical, fire safety, plumbing, general), a primary contact, insurance details and status (active / inactive / suspended). Sensitive personal details are encrypted at rest.
+
+## Competence Certificates
+
+A contractor's **competence certificates** — Gas Safe, NICEIC, SafeContractor, CHAS, ECA — are tracked with their numbers and expiry dates. This is what powers competence gating on [work orders](/facilities/work-orders#competence-gating): an expired ticket can block the contractor from being assigned new work until it's renewed, so you don't accidentally put an out-of-ticket trade on a regulated job.
+
+## Org-Wide vs Site-Scoped
+
+A contractor is either:
+
+- **Org-wide** — visible and assignable at every site, or
+- **Site-scoped** — visible only at the specific sites you link them to.
+
+Site-scoping keeps a managing agent's per-client contractor lists clean, and stops a site manager seeing trades they'd never use.
+
+## Contacts and Self-Enrolment
+
+A contractor can have several **contacts** (their employees). A contact can link to a login and sign in to the [portal](/facilities/contractor-portal) to see every job their company is engaged on — but they only ever see their own work, enforced at the server, never just hidden in the UI.
+
+<Card title="The contractor portal" icon="hard-hat" href="/facilities/contractor-portal">
+  How contractors accept jobs and upload certificates without an account.
+</Card>
