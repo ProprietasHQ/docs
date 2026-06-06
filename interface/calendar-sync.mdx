@@ -1,0 +1,56 @@
+---
+title: Calendar Sync
+description: Mirror your Proprietas calendar into Apple, Google or Outlook.
+---
+
+Proprietas mirrors your calendar — compliance deadlines, lease expiries, break dates, rent reviews, rent payments and scheduled work orders — straight into Apple Calendar, Google Calendar or Outlook. It's a **one-way subscription**: Proprietas stays the source of truth, and your calendar app reflects it. No app to install, no login to wire up.
+
+<Note>
+Subscribed calendars refresh on your calendar app's own schedule — Google can take up to a day; Apple and Outlook are usually faster. That's how calendar subscriptions work everywhere, and it's fine for deadlines that move rarely.
+</Note>
+
+## Turn It On
+
+<Steps>
+  <Step title="Open Settings → Calendar">
+    In the app, open **Settings → Calendar** and choose **Connect Your Calendar**.
+  </Step>
+  <Step title="Pick what to include">
+    Tick the event types you want — compliance deadlines, lease expiries, break dates, rent reviews, rent payments, scheduled work orders. The links update live as you change the selection.
+  </Step>
+  <Step title="Add it to your calendar app">
+    Use **Add to Apple / Add to Google / Add to Outlook**, or copy the subscription URL and paste it into any calendar app.
+  </Step>
+</Steps>
+
+## Per-Provider
+
+<Columns cols={3}>
+  <Card title="Apple Calendar" icon="apple">
+    Click **Add to Apple** (or paste the `webcal://` URL): File → New Calendar Subscription on macOS, or Settings → Calendar → Accounts → Add Subscribed Calendar on iPhone.
+  </Card>
+  <Card title="Google Calendar" icon="google">
+    Click **Add to Google**, or in Google Calendar: Other calendars → **From URL** → paste the link.
+  </Card>
+  <Card title="Outlook" icon="microsoft">
+    Click **Add to Outlook**, or in Outlook: Add calendar → **Subscribe from web** → paste the link.
+  </Card>
+</Columns>
+
+## Choosing What Syncs
+
+There are two layers, so different people and different calendars can show different things:
+
+- **At "Add to Calendar"** — tick exactly what *that* subscription includes. You can add "compliance only" to a shared team calendar and "everything" to your own, from the same screen.
+- **Your default** — **Set as My Default** saves your current selection as the default for the plain subscription URL, for when you subscribe from a calendar app that doesn't let you pick types. Each person's default is their own.
+
+## Keeping It Secure
+
+The subscription link carries a private token, so treat it like a password.
+
+- **Rotate URL** issues a new link and immediately stops the old one working — use it if a link is ever shared by mistake.
+- **Disconnect** turns the feed off entirely; the URL returns nothing until you reconnect.
+
+<Card title="The in-app calendar" icon="calendar" href="/interface/navigating">
+  Compliance, leases, rent and scheduled work also live on one calendar inside the app.
+</Card>
