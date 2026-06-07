@@ -127,6 +127,7 @@
               "interface/search",
               "interface/assistant",
               "interface/notifications",
+              "interface/desktop-app",
               "interface/calendar-sync",
               "interface/keyboard-shortcuts"
             ]
