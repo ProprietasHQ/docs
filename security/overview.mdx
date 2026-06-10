@@ -26,6 +26,15 @@ Every record carries an organisation ID, and every query is scoped to it. One cu
 
 PDF parsing, text extraction and OCR run on Proprietas infrastructure. Most documents are read by deterministic logic with **no external AI at all**. Only where genuine extraction is needed does the **extracted text** — never the file or page images — go to the AI provider over an encrypted channel; it's not trained on, and results are cached.
 
+## Sensitive Documents
+
+Any document can be marked **sensitive** — a settlement agreement, an HR letter, a without-prejudice deed. Once marked:
+
+- Only **organisation admins** can open, preview, download or include it in a ZIP. For everyone else it behaves as if it isn't there — requests return "not found", never "forbidden", so its existence isn't even leaked.
+- Its title is **excluded from [universal search](/interface/search)** (Cmd K) for non-admins — the name never surfaces in results.
+
+Marking a document sensitive is itself an admin action, and like every document change it's recorded in the [audit trail](/security/audit-trail).
+
 ## Accounts
 
 - **Multi-factor authentication** is supported and required for organisation admins
