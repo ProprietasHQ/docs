@@ -84,6 +84,7 @@
             "pages": [
               "facilities/issues",
               "facilities/work-orders",
+              "facilities/assets",
               "facilities/contractors",
               "facilities/contractor-portal"
             ]

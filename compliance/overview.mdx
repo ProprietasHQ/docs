@@ -24,6 +24,20 @@ Each **site × regime** produces a **compliance obligation** with a default freq
 | **Overdue** | Past the due date with no fresh certificate |
 | **Expired** | The certificate's own expiry has passed |
 
+## The Compliance View
+
+The compliance page is a **portfolio matrix** — properties down the side, regimes across the top — so the whole estate's status reads at a glance. A unified toolbar filters, sorts and searches it, and it's **pre-filterable by deep-link**, so search and the [assistant](/interface/assistant) can drop you onto exactly the overdue slice they're describing.
+
+<Frame>
+  <img src="/images/app-compliance.jpg" alt="The portfolio compliance matrix — properties by regime" />
+</Frame>
+
+Open any cell for the **obligation detail** page: Key Facts (last issued, expires, next due, frequency), the Responsible Person, and the **Latest Certificate** with the AI classifier's notes and confidence. **Findings & Actions** lists each observation from the certificate with a one-click **Create Work Order** to remediate it.
+
+<Frame>
+  <img src="/images/obligation-detail.jpg" alt="An obligation detail page with certificate, classifier notes and findings" />
+</Frame>
+
 ## Certificates
 
 Upload a certificate against an obligation — or just drag the PDF onto the page and let intake route it. Proprietas reads the document, confirms the type, inspector and expiry, and closes the obligation with the new date.
