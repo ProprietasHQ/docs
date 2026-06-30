@@ -1,0 +1,81 @@
+---
+title: ChatGPT & Claude (MCP)
+description: Connect ChatGPT, Claude or any MCP client to your Proprietas workspace and ask about your estate in plain English.
+---
+
+<Info>
+MCP is in **Beta**. Read access is available to every member; write actions are admin-only and off by default.
+</Info>
+
+Proprietas speaks the **Model Context Protocol (MCP)**, the open standard ChatGPT and Claude use to connect to external tools. Add Proprietas as a custom connector and you can ask about your portfolio in plain English ("what compliance is overdue?", "which leases break before March?", "how much rent is in arrears?") and get answers live from your workspace.
+
+Two things make it safe to switch on:
+
+- **Everyone signs in as themselves.** A connection is bound to the person who authorised it, scoped to exactly what their role already sees in the app. Nothing is shared.
+- **Every call is audit-logged.** Each question an assistant asks is recorded against the member who connected, so you always know what was accessed.
+
+## Turn It On
+
+Enabling MCP is an admin action, done once for the whole workspace.
+
+<Steps>
+  <Step title="Open Settings → MCP">
+    In the app, open **Settings → MCP** and switch **Enable MCP** on. Members can now connect.
+  </Step>
+  <Step title="(Optional) Allow write actions">
+    Leave this off for read-only access. Turn it on only if you want assistants to make changes (raise a work order, log a payment, assign an issue). Even then, write actions work **only for organisation admins**.
+  </Step>
+  <Step title="Copy the endpoint URL">
+    The **Endpoint URL** on the same panel is what each member pastes into ChatGPT or Claude.
+  </Step>
+</Steps>
+
+## Connect a Client
+
+Any member of the workspace can connect, using their own account.
+
+<Columns cols={2}>
+  <Card title="ChatGPT" icon="robot">
+    Turn on **Developer Mode** (or use your workspace Connectors), add a custom connector, and paste the Proprietas endpoint URL. Sign in with your Proprietas account and approve the connection.
+  </Card>
+  <Card title="Claude" icon="message">
+    In Settings → Connectors, add a custom connector and paste the Proprietas endpoint URL. Sign in with your Proprietas account and approve.
+  </Card>
+</Columns>
+
+<Note>
+The connection runs over the internet, so the endpoint must be your live Proprietas URL (not a local address). The first time you connect you'll be sent to a Proprietas sign-in and a short consent screen showing exactly what the assistant will be able to do.
+</Note>
+
+## What You Can Ask
+
+Read access covers the whole estate, the same data you'd see in the app:
+
+<Columns cols={2}>
+  <Card title="Compliance" icon="shield-check">
+    What's overdue or due soon, by site or regime (FRA, EICR, gas, legionella and the rest).
+  </Card>
+  <Card title="Leases & rent" icon="file-contract">
+    Term ends, break dates and rent reviews coming up; rent in arrears, in and out.
+  </Card>
+  <Card title="Work orders & issues" icon="screwdriver-wrench">
+    Open jobs, what's breaching SLA, and reported issues by site or priority.
+  </Card>
+  <Card title="Sites & assets" icon="building">
+    Your sites and properties, plus assets and replacements due.
+  </Card>
+</Columns>
+
+## Write Actions (Admins)
+
+When an admin enables write actions, an assistant can also **raise a work order from an issue**, **log a payment** against a work order, and **assign an issue** to a team member. These only ever run for organisation admins, and every change is audit-logged exactly as it would be from inside the app.
+
+## Security & Control
+
+<Card title="Turn it off any time" icon="power-off">
+  Switching **Enable MCP** off in Settings stops every connection immediately. Write access is governed separately, so you can keep reads on and writes off.
+</Card>
+
+- Connections are scoped per person, to their role.
+- Every tool call is recorded in your audit log.
+- Read access is the default; write access is opt-in and admin-only.

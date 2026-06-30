@@ -130,6 +130,7 @@
               "interface/notifications",
               "interface/desktop-app",
               "interface/calendar-sync",
+              "interface/mcp",
               "interface/keyboard-shortcuts"
             ]
           }
