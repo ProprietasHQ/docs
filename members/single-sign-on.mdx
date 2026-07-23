@@ -1,5 +1,5 @@
 ---
-title: Single Sign-on
+title: Single sign-on
 description: Let your team sign in with your identity provider.
 ---
 
@@ -9,15 +9,11 @@ Single sign-on (SSO) lets people on your verified domain sign in through your id
   OIDC SSO is available on Professional and above. SAML and SCIM (automated provisioning) are Enterprise-only and on the [roadmap](/roadmap).
 </Note>
 
-## Set Up a Connection
+## Set up a connection
 
 <Steps>
   <Step title="Create an OAuth app in your IdP">
-    In your identity provider, create an OIDC / OAuth app. Add this **Redirect URL** (shown at the top of the SSO settings):
-
-    ```
-    https://proprietas.app/api/auth/callback/sso
-    ```
+    In your identity provider, create an OIDC / OAuth app. Copy the **Redirect URL** shown at the top of **Settings → SSO Domains** (it matches the host you're signed into — typically `https://my.proprietas.app/api/auth/callback/sso`).
 
     For Google Workspace, set the consent screen to **Internal** so it's scoped to your domain.
   </Step>
@@ -36,7 +32,7 @@ Single sign-on (SSO) lets people on your verified domain sign in through your id
     Under **Verified Domains**, claim your domain and add the **TXT record** shown (`_proprietas-verify.<domain>`) at your DNS host, then click **Verify**. Only verified domains route their users to SSO.
   </Step>
   <Step title="Sign in">
-    Sign out, go to [proprietas.app/login](https://proprietas.app/login) and enter a work email on the verified domain — you'll be sent to your IdP and back into the app.
+    Sign out, go to [my.proprietas.app/login](https://my.proprietas.app/login) and enter a work email on the verified domain — you'll be sent to your IdP and back into the app.
   </Step>
 </Steps>
 

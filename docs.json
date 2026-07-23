@@ -19,122 +19,102 @@
     "options": ["copy", "view", "assistant"]
   },
   "navigation": {
-    "anchors": [
+    "groups": [
       {
-        "anchor": "Overview",
-        "icon": "compass",
-        "groups": [
-          {
-            "group": "Welcome",
-            "icon": "book-open",
-            "pages": ["index", "overview/philosophy"]
-          },
-          {
-            "group": "Roadmap",
-            "icon": "map",
-            "pages": ["roadmap"]
-          }
+        "group": "Get started",
+        "icon": "rocket",
+        "pages": [
+          "index",
+          "getting-started/introduction",
+          "getting-started/quickstart",
+          "getting-started/properties-and-scope",
+          "overview/philosophy"
         ]
       },
       {
-        "anchor": "Guides",
-        "icon": "book-open",
-        "groups": [
-          {
-            "group": "Getting Started",
-            "icon": "rocket",
-            "pages": [
-              "getting-started/introduction",
-              "getting-started/quickstart",
-              "getting-started/properties-and-scope"
-            ]
-          },
-          {
-            "group": "Compliance",
-            "icon": "shield-check",
-            "pages": [
-              "compliance/overview",
-              "compliance/certificates",
-              "compliance/reminders",
-              "compliance/planned-maintenance",
-              "compliance/audit-packs"
-            ]
-          },
-          {
-            "group": "Documents & AI",
-            "icon": "sparkles",
-            "pages": [
-              "documents/intake",
-              "documents/how-extraction-works",
-              "documents/supported-documents"
-            ]
-          },
-          {
-            "group": "Leases & Rent",
-            "icon": "file-text",
-            "pages": [
-              "leases/lease-intelligence",
-              "leases/rent-and-payments",
-              "leases/deeds-and-transfers"
-            ]
-          },
-          {
-            "group": "Facilities",
-            "icon": "wrench",
-            "pages": [
-              "facilities/issues",
-              "facilities/work-orders",
-              "facilities/assets",
-              "facilities/contractors",
-              "facilities/contractor-portal"
-            ]
-          },
-          {
-            "group": "Members & Access",
-            "icon": "users",
-            "pages": [
-              "members/roles-and-invites",
-              "members/single-sign-on",
-              "members/access-requests"
-            ]
-          },
-          {
-            "group": "Billing",
-            "icon": "credit-card",
-            "pages": [
-              "billing/plans-and-ai-usage",
-              "billing/trials-and-lapses"
-            ]
-          },
-          {
-            "group": "Security",
-            "icon": "shield",
-            "pages": [
-              "security/overview",
-              "security/audit-trail"
-            ]
-          }
+        "group": "Compliance",
+        "icon": "shield-check",
+        "pages": [
+          "compliance/overview",
+          "compliance/certificates",
+          "compliance/reminders",
+          "compliance/planned-maintenance",
+          "compliance/audit-packs"
         ]
       },
       {
-        "anchor": "Interface",
+        "group": "Files & AI",
+        "icon": "sparkles",
+        "pages": [
+          "documents/intake",
+          "documents/how-extraction-works",
+          "documents/supported-documents"
+        ]
+      },
+      {
+        "group": "Leases & rent",
+        "icon": "file-text",
+        "pages": [
+          "leases/lease-intelligence",
+          "leases/rent-and-payments",
+          "leases/deeds-and-transfers"
+        ]
+      },
+      {
+        "group": "Facilities",
+        "icon": "wrench",
+        "pages": [
+          "facilities/issues",
+          "facilities/work-orders",
+          "facilities/assets",
+          "facilities/floor-plans",
+          "facilities/contractors",
+          "facilities/contractor-portal"
+        ]
+      },
+      {
+        "group": "Using the product",
         "icon": "layout-dashboard",
-        "groups": [
-          {
-            "group": "Using the App",
-            "icon": "layout-dashboard",
-            "pages": [
-              "interface/navigating",
-              "interface/search",
-              "interface/assistant",
-              "interface/notifications",
-              "interface/desktop-app",
-              "interface/calendar-sync",
-              "interface/mcp",
-              "interface/keyboard-shortcuts"
-            ]
-          }
+        "pages": [
+          "interface/navigating",
+          "interface/search",
+          "interface/assistant",
+          "interface/notifications",
+          "interface/keyboard-shortcuts",
+          "interface/calendar-sync",
+          "interface/desktop-app",
+          "interface/mcp"
         ]
+      },
+      {
+        "group": "Members & access",
+        "icon": "users",
+        "pages": [
+          "members/roles-and-invites",
+          "members/single-sign-on",
+          "members/access-requests"
+        ]
+      },
+      {
+        "group": "Billing",
+        "icon": "credit-card",
+        "pages": [
+          "billing/plans-and-ai-usage",
+          "billing/trials-and-lapses"
+        ]
+      },
+      {
+        "group": "Security",
+        "icon": "shield",
+        "pages": [
+          "security/overview",
+          "security/audit-trail"
+        ]
+      },
+      {
+        "group": "Roadmap",
+        "icon": "map",
+        "pages": ["roadmap"]
       }
     ]
   },
@@ -143,16 +123,22 @@
     "dark": "/logo/dark.svg"
   },
   "navbar": {
-    "links": [],
+    "links": [
+      {
+        "label": "Pricing",
+        "href": "https://proprietas.app/pricing"
+      }
+    ],
     "primary": {
       "type": "button",
       "label": "Open Proprietas",
-      "href": "https://proprietas.app/login"
+      "href": "https://my.proprietas.app/login"
     }
   },
   "footer": {
     "socials": {
-      "website": "https://proprietas.app"
+      "website": "https://proprietas.app",
+      "linkedin": "https://www.linkedin.com/company/proprietashq"
     }
   }
 }

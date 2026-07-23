@@ -1,19 +1,27 @@
 ---
-title: Keyboard Shortcuts
+title: Keyboard shortcuts
 description: Move through Proprietas without reaching for the mouse.
 ---
 
-Proprietas is built to be fast — sub-200ms interactions are a brand promise — and the keyboard is the fastest way through it.
+Proprietas is built to be fast — and the keyboard is the fastest way through it. Shortcuts stand down while you're typing in an input, textarea or the assistant.
 
 ## Global
 
 | Shortcut | Action |
 | --- | --- |
 | <kbd>Cmd</kbd> <kbd>K</kbd> / <kbd>Ctrl</kbd> <kbd>K</kbd> | Open [universal search](/interface/search) |
-| <kbd>Cmd</kbd> <kbd>Shift</kbd> <kbd>A</kbd> | Open / close the [assistant](/interface/assistant) panel |
-| <kbd>Esc</kbd> | Close the palette, assistant, or any open panel |
+| <kbd>g</kbd> then <kbd>d</kbd> | Go to Dashboard |
+| <kbd>g</kbd> then <kbd>s</kbd> | Go to Properties (sites) |
+| <kbd>g</kbd> then <kbd>c</kbd> | Go to Compliance |
+| <kbd>g</kbd> then <kbd>w</kbd> | Go to Work orders |
+| <kbd>g</kbd> then <kbd>i</kbd> | Go to Inbox (document intake) |
+| <kbd>g</kbd> then <kbd>r</kbd> | Go to Rent |
+| <kbd>g</kbd> then <kbd>a</kbd> | Go to the [assistant](/interface/assistant) |
+| <kbd>Esc</kbd> | Close the palette, dialog, or any open panel |
 
-## In Universal Search
+Chord shortcuts (`g` then a letter) wait about a second for the second key. They never fire while a text field is focused.
+
+## In universal search
 
 | Shortcut | Action |
 | --- | --- |
@@ -22,59 +30,72 @@ Proprietas is built to be fast — sub-200ms interactions are a brand promise �
 | <kbd>P</kbd> | Toggle the preview pane |
 | <kbd>Esc</kbd> | Close search |
 
-## On the Dashboard
+## On the dashboard
 
-Press <kbd>/</kbd> to add a block to your customisable dashboard from anywhere on the page.
+Press <kbd>/</kbd> to open the block picker and add a block to your customisable dashboard (ignored while typing in a notes field or other input).
 
-## Data Grids
+## Data grids
 
-The [Issues](/facilities/issues), [Work Orders](/facilities/work-orders) and [Assets](/facilities/assets) grids edit like a spreadsheet:
+The [Issues](/facilities/issues), [Work orders](/facilities/work-orders) and [Assets](/facilities/assets) grids edit like a spreadsheet:
 
 | Shortcut | Action |
 | --- | --- |
 | <kbd>Tab</kbd> / <kbd>Shift</kbd> <kbd>Tab</kbd> | Move to the next / previous cell |
 | Double-click, or just start typing | Edit the selected cell |
 | <kbd>Enter</kbd> | Commit the edit and move down |
-| <kbd>Cmd</kbd> <kbd>C</kbd> / <kbd>Ctrl</kbd> <kbd>C</kbd> | Copy the selected cell |
+| <kbd>Cmd</kbd> <kbd>C</kbd> / <kbd>Ctrl</kbd> <kbd>C</kbd> | Copy the selected cell or range |
+| <kbd>Cmd</kbd> <kbd>V</kbd> / <kbd>Ctrl</kbd> <kbd>V</kbd> | Paste TSV (spreadsheet paste) at the active cell |
 | <kbd>Cmd</kbd> <kbd>Z</kbd> / <kbd>Ctrl</kbd> <kbd>Z</kbd> | Undo — including restoring deleted rows |
+| <kbd>Cmd</kbd> <kbd>Shift</kbd> <kbd>Z</kbd> / <kbd>Ctrl</kbd> <kbd>Y</kbd> | Redo |
+| <kbd>Cmd</kbd> <kbd>F</kbd> / <kbd>Ctrl</kbd> <kbd>F</kbd> | Find in the grid |
+| <kbd>Cmd</kbd> <kbd>O</kbd> / <kbd>Ctrl</kbd> <kbd>O</kbd> | Open the selected / peeked row full-page |
 | Drag the fill handle | Fill a value down the column |
 | <kbd>Shift</kbd> <kbd>F</kbd> | Open the filter builder |
-| <kbd>Shift</kbd> <kbd>S</kbd> | Save the current grid as a new view |
+| <kbd>Shift</kbd> <kbd>S</kbd> | Save the current layout as a new view (when it diverges from Default) |
 
-## Floor Plans
+## Floor plans
 
-The plan viewer is a Figma-style canvas — pan, zoom, place assets and draw rooms without leaving the keyboard. Press <kbd>?</kbd> at any time to bring up this legend in-app.
+The [plan viewer](/facilities/floor-plans) is a Figma-style canvas — pan, zoom, place assets and draw rooms without leaving the keyboard. Press <kbd>?</kbd> at any time to bring up this legend in-app.
 
 | Shortcut | Action |
 | --- | --- |
 | <kbd>V</kbd> | Select tool |
-| <kbd>P</kbd> | Place the selected asset as a pin |
+| <kbd>P</kbd> / <kbd>M</kbd> | Place the selected asset as a pin (or open the asset picker) |
 | <kbd>N</kbd> | New asset — then click to drop it on the plan |
-| <kbd>R</kbd> | Draw a room |
+| <kbd>R</kbd> | Draw a rectangle room |
+| <kbd>L</kbd> | Draw a freeform path room |
+| <kbd>O</kbd> | Draw an ellipse room |
 | <kbd>Shift</kbd> <kbd>R</kbd> | Rename the room under the cursor |
 | <kbd>F</kbd> | Fit the plan to the screen |
-| <kbd>2</kbd> / <kbd>3</kbd> | Switch between 2D and 3D |
+| <kbd>2</kbd> / <kbd>3</kbd> | Switch between 2D and 3D (3D when geometry is available) |
 | <kbd>+</kbd> / <kbd>-</kbd> | Zoom in / out |
 | <kbd>[</kbd> / <kbd>]</kbd> | Previous / next floor |
 | <kbd>C</kbd> | Compare with the original drawing |
-| <kbd>D</kbd> | Show / hide the detail layer |
-| <kbd>/</kbd> | Search this plan |
-| <kbd>Cmd</kbd> <kbd>\\</kbd> | Hide the panels for a full-bleed plan |
-| <kbd>Enter</kbd> | Finish the room you're drawing (or drop another of the asset you're placing) |
-| <kbd>Delete</kbd> | Remove the selected pin or room |
-| <kbd>Esc</kbd> | Cancel the current tool, close a menu, or exit search |
+| <kbd>D</kbd> | Show / hide the detail layer (furniture & doors) |
+| <kbd>Cmd</kbd> <kbd>F</kbd> or <kbd>/</kbd> | Search this plan |
+| <kbd>Cmd</kbd> <kbd>Ctrl</kbd> <kbd>\\</kbd> / <kbd>Ctrl</kbd> <kbd>Alt</kbd> <kbd>\\</kbd> | Show / hide the side panel |
+| Hold <kbd>Space</kbd> | Pan |
+| <kbd>Enter</kbd> | Finish the path you're drawing (or drop another of the asset you're placing) |
+| <kbd>Delete</kbd> / <kbd>Backspace</kbd> | Remove the selected pin or room |
+| <kbd>Esc</kbd> | Cancel the current tool, close a menu, or deselect |
+| <kbd>?</kbd> | Show this shortcuts legend |
 
-## In the Desktop App
+While reshaping a room path: <kbd>U</kbd> union, <kbd>S</kbd> subtract, <kbd>Cmd</kbd> <kbd>Z</kbd> undo path edit, <kbd>Cmd</kbd> <kbd>Shift</kbd> <kbd>Z</kbd> redo.
+
+## In the desktop app
 
 The [desktop app](/interface/desktop-app) is tabbed — each tab keeps its own site and state, so you can keep one property open per tab and flip between them.
 
 | Shortcut | Action |
 | --- | --- |
-| <kbd>Cmd</kbd> <kbd>T</kbd> | New tab |
-| <kbd>Cmd</kbd> <kbd>W</kbd> | Close the current tab (closes the window if it's the last) |
+| <kbd>Cmd</kbd> <kbd>T</kbd> / <kbd>Ctrl</kbd> <kbd>T</kbd> | New tab |
+| <kbd>Cmd</kbd> <kbd>W</kbd> / <kbd>Ctrl</kbd> <kbd>W</kbd> | Close the current tab |
 | <kbd>Ctrl</kbd> <kbd>Tab</kbd> | Next tab |
 | <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>Tab</kbd> | Previous tab |
-| <kbd>Cmd</kbd> <kbd>\\</kbd> | Toggle the sidebar |
+| <kbd>Cmd</kbd> <kbd>1</kbd>…<kbd>8</kbd> | Jump to that tab |
+| <kbd>Cmd</kbd> <kbd>9</kbd> | Jump to the last tab |
+
+Web shortcuts (<kbd>Cmd</kbd> <kbd>K</kbd>, grids, floor plans) work the same inside each desktop tab.
 
 <Tip>
   Once a workspace has more than a handful of properties, <kbd>Cmd</kbd> <kbd>K</kbd> is almost always faster than the sidebar. Make it your default way to navigate.

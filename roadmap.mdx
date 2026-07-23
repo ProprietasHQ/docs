@@ -1,83 +1,102 @@
 ---
 title: Roadmap
-description: What's live in Proprietas today and what's coming next.
+description: What's live in Proprietas, what we're building now, and what comes later.
 ---
 
-An honest picture of where Proprietas is. Everything under **What's live now** works today; everything under **Coming up** is committed but not shipped.
+An honest picture of the product. **Live** means you can use it today. **Working on now** is active engineering — shipping in the near term. **Further out** is committed direction, not this quarter's build queue.
 
-## What's Live Now
+## What's live
 
 ### Compliance
-- Every UK statutory regime tracked — FRA, EICR, L8/legionella, gas, asbestos, PAT, EPC, F-Gas, TM44, fire alarm, emergency lighting, insurance
-- Mark a site as an HMO and the right pack seeds itself — the **HMO licence** (mandatory, additional or selective) tracked with its renew-before-expiry deadline, alongside the tougher fire and residential regimes an HMO pulls in
-- Per-site and per-floor status at a glance — overdue, due soon, valid
-- Pre-expiry reminders at 90/60/30/7 days, routed to a named Responsible Person and an escalation contact
-- Automatic work orders raised at the 7-day threshold and routed to the right contractor
-- One-click audit pack PDF for inspectors (Ofsted, CQC, DSPT, insurers)
-- Compliance deadlines you can subscribe to in Google, Outlook or Apple calendar
+- Full UK statutory regime catalog — FRA, EICR, L8/legionella, gas, asbestos, PAT, EPC, F-Gas, TM44, fire alarm, emergency lighting, insurance and more
+- HMO sites seed the right pack, including the **HMO licence** (mandatory, additional or selective) with renew-before-expiry tracking
+- Portfolio matrix — per-site and per-floor status at a glance (overdue, due soon, valid)
+- Pre-expiry reminders at 90 / 60 / 30 / 7 days, routed to a named Responsible Person and an escalation contact
+- Renewal work orders raised at the 7-day threshold and routed to the right contractor
+- One-click audit pack PDF for inspectors and insurers
+- Deadlines on the in-app calendar and via [Apple / Google / Outlook subscription](/interface/calendar-sync)
 
-### Lease Intelligence
-- Drop a lease PDF — term dates, break clauses, rent reviews, service-charge caps, alienation, repairing obligation, LTA 1954 status and permitted use, in under a minute
-- Every figure page-cited back to the source wording
-- Inline editing of any field, with partial saves
-- Reads land-registry transfers (TR1) and reversionary documents too
+### Lease intelligence & rent
+- Drop a lease PDF — term dates, break clauses, rent reviews, service-charge caps, alienation, repairing obligation, LTA 1954 status and permitted use
+- Every figure page-cited back to the source wording; inline edit with partial saves
+- Land-registry transfers (TR1), deeds and reversionary documents beside the lease
+- Rent schedules projected from the lease, inbound and outbound, with due / paid tracking
 
 ### Facilities
 - Issue reporting from a public link — no account needed
-- Work orders with a no-account contractor portal
+- Work orders with a no-account [contractor portal](/facilities/contractor-portal)
 - Contractor competence gating (Gas Safe, NICEIC, SafeContractor, CHAS)
-- Mobile-first across every contractor and tenant flow
+- Org-wide [asset register](/facilities/assets) as a spreadsheet-style grid, with replacements and fault history
+- [Floor plans](/facilities/floor-plans) — PDF / DXF / DWG in, rooms detected, assets pinned, 2D and 3D
+- Mobile-first contractor and tenant flows throughout
 
-### AI Assistant & Intake
-- Ask your portfolio anything from the topbar or the search bar
-- Every answer shows its working — the reasoning and the exact records behind it — and links straight to them
-- Answers the operational questions directly: who a job is assigned to, what rent and renewals are due, where you're exposed
-- Conversations persist, and the assistant respects your active property scope
-- Universal document intake — drop any PDF and it files itself
-- Free compliance scanner at [proprietas.app/try](https://proprietas.app/try) — drop a PDF or a photo of a certificate, no signup
-- Low-confidence statutory dates held for human review, never auto-filed wrong
+### AI, documents & assistant
+- Universal [document intake](/documents/intake) — drop any PDF (or a photo of a certificate) and it classifies, extracts and files
+- Free compliance scanner at [proprietas.app/try](https://proprietas.app/try) — three scans a day, no signup, nothing stored
+- Low-confidence statutory dates held for human review — never auto-filed below the confidence bar
+- In-app [assistant](/interface/assistant) with persistent conversations, property scope and links to the records behind each answer
+- [MCP connectors](/interface/mcp) for Claude, ChatGPT and Grok — read your estate from the tools you already use (write actions admin-gated)
+- Sensitive documents — admin-only visibility, excluded from search for everyone else
 
-### Members & Security
-- Editor / Light / Admin roles, with light (contractor & tenant) access free and unlimited
-- Email invitations and an audit trail on every change
-- **Single sign-on (OIDC)** for Google, Microsoft Entra and Okta, with domain verification
-- **Domain join-requests** — people on your verified domain request access and an admin approves
-- Multi-factor authentication, column-level encryption of sensitive data, signed DPA
+### Workspace
+- Spreadsheet-style data grids on issues, work orders, assets and rent — filter, sort, saved views, inline edit, keyboard-first
+- [Universal search](/interface/search) (Cmd K) across the portfolio
+- Customisable dashboard, live notifications and work-order conversation threads
+- [Desktop app](/interface/desktop-app) for Mac and Windows — tabbed windows, same workspace as the web
 
-### Billing
-- Self-serve subscriptions on three published tiers with an annual/monthly toggle
-- Switch tiers any time — immediate prorated upgrades, downgrades at renewal
-- Transparent AI fair-use bars and one-click credit top-ups, with extra usage drawn at cost
+### Members, security & billing
+- Editor / Light / Admin roles — light users (contractors & tenants) free and unlimited on every tier
+- Email invites, domain join-requests, and [OIDC SSO](/members/single-sign-on) (Google, Microsoft Entra, Okta) on Professional and above
+- Multi-factor authentication, column-level PII encryption, signed DPA, immutable [audit trail](/security/audit-trail)
+- Self-serve billing on three [published tiers](/billing/plans-and-ai-usage), annual/monthly toggle, AI fair-use bars and credit top-ups
 
-### Desktop App
-- Native desktop app for **Mac and Windows** — your whole portfolio in a fast, tabbed window, free with every plan
-- Open several properties side by side in tabs and switch between them from the keyboard
-- Universal search and the assistant, one keystroke away, without a browser in the way
-- Same data and same sign-in as the web — nothing new to learn
+---
 
-## Coming Up
+## Working on now
 
-<Note>These are committed and in progress — not yet live.</Note>
+The near-term focus is **making the product rock-solid for real UK estates** — not sprawling into new product lines.
 
-### Production-Grade (Next)
-- Enforced MFA for admins with step-up on sensitive actions
-- Published 99% accuracy on UK commercial leases, measured every quarter
-- Regulator-shaped report bundles — Ofsted, CQC, DSPT, ISO 27001, insurance renewals — one click each
+### Floor-plan quality on real drawings
+The viewer is live; the engine is still being hardened on customer PDFs, DXFs and DWGs. Active work: better room topology, DWG ingest that survives real architectural files, faster extract on dense GA plans, and the gates that must pass before we automate pin-suggest or triage-from-room.
+
+### Extraction accuracy
+Lease and certificate extract is the moat. Active work: gold-corpus evaluation on UK commercial leases, training capture from real filings, OCR/vision fallbacks for scanned paper, and CI gates so a prompt or model change cannot silently ship a wrong break date or statutory expiry.
+
+### Production hardening
+Ship-safety and trust for estates teams carrying personal liability: hard PR CI, tenant-isolation proof tests, broader e2e on critical paths (portal, intake, billing), extraction regression gates, and clearer performance budgets on the heavy surfaces (grids, plan viewer, intake).
+
+### Day-to-day polish
+Ongoing work on the surfaces teams live in — data grids, peeks, notifications, mentions, demo/seed fidelity and mobile contractor flows — so the product stays calm and fast as portfolios grow.
+
+---
+
+## Further out
+
+Committed direction. Not the current build queue — expect these after the work above lands.
+
+### Enterprise & integrations
+- Enforced MFA for admins, with step-up on sensitive actions
+- Enterprise SSO (SAML) and automated provisioning (SCIM), plus IP allow-listing
+- Customer REST API and webhooks
+- Accounting connectors — Xero, Sage, QuickBooks (calendars and MCP are already live)
+
+### Compliance depth
+- Regulator-shaped report bundles — Ofsted, CQC, DSPT, ISO 27001, insurance renewals — as dedicated one-click packs beyond today's audit pack
+- Published quarterly accuracy measures on UK commercial lease extract (target: 99% on the gold corpus)
+
+### Field & migration
 - Native offline contractor mobile app
-- REST API and webhooks for everything
-- Out-of-the-box integrations — Xero, Sage, IRIS, ShiftPlanning, Planday
-- Enterprise SSO (SAML) and automated provisioning (SCIM), with IP allow-listing
-- One-afternoon migration from Planon, Concerto and MRI
+- One-afternoon migration paths from Planon, Concerto and MRI
 
-### International (Later)
-- Ireland first, then Germany, France and the Netherlands — local lease formats out of the box
-- EU compliance regimes per market
-- Per-country language packs and multi-currency rent handling
-- Cross-border group-management dashboards
+### International
+- Ireland first, then Germany, France and the Netherlands — local lease formats and compliance regimes
+- Language packs, multi-currency rent, and cross-border group dashboards
 
-## Missing Something?
+---
 
-We read every feature request. If it's in the wedge, it gets built.
+## Missing something?
+
+We read every feature request. If it's in the wedge — compliance, leases, facilities — it gets built.
 
 <Card title="Email a feature request" icon="mail" href="mailto:hello@proprietas.app?subject=Feature%20request">
   Tell us what would make Proprietas indispensable for your estate.

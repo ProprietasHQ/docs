@@ -1,0 +1,44 @@
+---
+title: Floor plans
+description: Drop a PDF or DWG, pin assets to real rooms, and walk the building in 2D or 3D.
+---
+
+Every [site](/getting-started/properties-and-scope#sites-and-properties) can hold **floor plans** — the architect's drawing turned into a live canvas where rooms are detected, [assets](/facilities/assets) are pinned to their real location, and issues can deep-link to the room they sit in.
+
+Open a property → **Floor Plans**, or drop a plan PDF/DWG onto the app and let [document intake](/documents/intake) file it.
+
+## What you get
+
+- **Auto room detection** from PDF, DXF or DWG — geometry is reconstructed on Proprietas infrastructure (no LLM required for the plan itself)
+- **2D and 3D** views of the same plan, with a compare slider against the original drawing
+- **Asset pins** — place plant and equipment on the room where it actually lives
+- **Drawn rooms** — rectangle, freeform path or ellipse when the extract needs a hand edit
+- Multi-floor buildings: step between floors with <kbd>[</kbd> / <kbd>]</kbd>
+
+## Using the viewer
+
+| | |
+| --- | --- |
+| **Select** (<kbd>V</kbd>) | Click rooms and pins; pan with Space held or middle-drag |
+| **Place asset** (<kbd>P</kbd>) | Drop the selected asset, or open the asset picker |
+| **New asset** (<kbd>N</kbd>) | Create an asset and pin it in one flow |
+| **Draw** (<kbd>R</kbd> / <kbd>L</kbd> / <kbd>O</kbd>) | Rectangle, path or ellipse rooms |
+| **Fit** (<kbd>F</kbd>) | Zoom the whole plan into view |
+| **2D / 3D** (<kbd>2</kbd> / <kbd>3</kbd>) | Switch projection when geometry is available |
+| **Compare** (<kbd>C</kbd>) | Overlay the original drawing |
+| **?** | Full keyboard legend in-app |
+
+The complete key list lives under [Keyboard shortcuts → Floor plans](/interface/keyboard-shortcuts#floor-plans).
+
+## Why it matters
+
+A certificate or work order that only names "boiler plant room" is hard to hand to a contractor at 7am. A pin on the actual plan — with the room label the extract pulled from the drawing — is unambiguous. Fault history on an asset stays tied to where the kit is, not a free-text note.
+
+<Columns cols={2}>
+  <Card title="Assets" icon="boxes" href="/facilities/assets">
+    The spreadsheet register pins land on.
+  </Card>
+  <Card title="Keyboard shortcuts" icon="keyboard" href="/interface/keyboard-shortcuts#floor-plans">
+    Every viewer key, matching the in-app legend.
+  </Card>
+</Columns>

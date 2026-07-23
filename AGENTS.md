@@ -1,33 +1,41 @@
-> **First-time setup**: Customize this file for your project. Prompt the user to customize this file for their project.
-> For Mintlify product knowledge (components, configuration, writing standards),
-> install the Mintlify skill: `npx skills add https://mintlify.com/docs`
-
 # Documentation project instructions
 
 ## About this project
 
-- This is a documentation site built on [Mintlify](https://mintlify.com)
-- Pages are MDX files with YAML frontmatter
-- Configuration lives in `docs.json`
-- Run `mint dev` to preview locally
-- Run `mint broken-links` to check links
+- Mintlify docs for **Proprietas** (UK estate management)
+- Pages are MDX with YAML frontmatter
+- Config: `docs.json`
+- Local preview: `npx mintlify dev` (from this folder)
+- Broken links: `npx mintlify broken-links`
 
-## Terminology
+## Product framing
 
-{/* Add product-specific terms and preferred usage */}
-{/* Example: Use "workspace" not "project", "member" not "user" */}
+- Audience: UK estates teams (MATs, care, healthcare, managing agents, campuses)
+- Pillars: statutory compliance · lease intelligence · facilities
+- Pricing is published (£199 / £699 / £2,499+/mo) — never "contact sales"
+- Product app: `my.proprietas.app` · marketing: `proprietas.app`
 
-## Style preferences
+## IA
 
-{/* Add any project-specific style rules below */}
+Navigation is **flat product groups** in `docs.json` (not Overview / Guides / Interface tabs):
 
-- Use active voice and second person ("you")
-- Keep sentences concise — one idea per sentence
-- Use sentence case for headings
-- Bold for UI elements: Click **Settings**
-- Code formatting for file names, commands, paths, and code references
+1. Get started
+2. Compliance
+3. Files & AI (app sidebar label is **Files**)
+4. Leases & rent
+5. Facilities
+6. Using the product (shell: search, assistant, desktop, MCP, calendar sync, …)
+7. Members & access
+8. Billing
+9. Security
+10. Roadmap — three buckets only: **What's live** · **Working on now** · **Further out**. Never claim live what is still planned; flip items only when shipped.
 
-## Content boundaries
+Put feature how-tos under the pillar they belong to. Put shell/UX surfaces under **Using the product**. Match app names where they differ from pillar names (Files, Properties, Work Orders).
 
-{/* Define what should and shouldn't be documented */}
-{/* Example: Don't document internal admin features */}
+## Style
+
+- Active voice, second person ("you")
+- Sentence case headings
+- Bold UI labels: open **Settings → Members**
+- Prefer short pages over encyclopedias
+- Keep roadmap honest: live vs coming next
