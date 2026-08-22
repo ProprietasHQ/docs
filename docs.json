@@ -16,7 +16,11 @@
     "eyebrows": "breadcrumbs"
   },
   "contextual": {
-    "options": ["copy", "view", "assistant"]
+    "options": [
+      "copy",
+      "view",
+      "assistant"
+    ]
   },
   "navigation": {
     "groups": [
@@ -47,6 +51,7 @@
         "icon": "sparkles",
         "pages": [
           "documents/intake",
+          "documents/email",
           "documents/how-extraction-works",
           "documents/supported-documents"
         ]
@@ -114,7 +119,9 @@
       {
         "group": "Roadmap",
         "icon": "map",
-        "pages": ["roadmap"]
+        "pages": [
+          "roadmap"
+        ]
       }
     ]
   },

@@ -1,0 +1,61 @@
+---
+title: Documents by email
+description: Every workspace has its own address. Forward a certificate and it files itself.
+---
+
+Your contractors already email you certificates. **Documents by Email** gives your workspace its own address so that email is the filing step, with nothing for the contractor to learn and no portal for them to log into.
+
+Forward the message, or give the address out and let them send to it directly. The attachment arrives, is read, matched to the right building, and filed against the right obligation with the next due date set.
+
+## Your workspace address
+
+Open **Settings → Documents by Email**. Each workspace gets an address derived from its slug:
+
+```
+your-workspace@ap.proprietas.app
+```
+
+Copy it into your contractor instructions, or set it as a forwarding rule in your own mailbox.
+
+<Note>
+  Documents by Email is available on **Professional** and **Enterprise**. Contractors and leaseholders never need a seat.
+</Note>
+
+## Allowed senders
+
+An open inbox address would accept anything, so it doesn't. Only senders you allow can reach the workspace, and everything else is refused at the door.
+
+Add senders by domain (`britishgas.co.uk`) or by individual address. When you add a domain, Proprietas checks its DMARC policy first and tells you what it found, because a domain with no DMARC policy can be spoofed by anyone.
+
+Refused messages are visible to you, so a contractor who sends from an address you haven't allowed isn't silently lost.
+
+## What happens to an attachment
+
+Each attachment is treated exactly as if you had dropped it into the app yourself. Same classifier, same extraction, same confidence bar.
+
+1. The document is created and the attachment stored
+2. The classifier reads it and works out the kind, the site and the obligation
+3. If it is confident, the document files itself
+4. If it is not, it waits in your **Inbox** with what it thinks it found
+
+Point 4 is the important one. A statutory date is never filed automatically below the confidence bar. When the system is unsure it tells you what it read and why it hesitated, and you confirm in one click. Getting a fire-safety date wrong is not a trade worth making for convenience.
+
+One difference from a browser upload: the email path will never create a site. A forwarded document from an address you allowed can file against buildings you already have, but it cannot invent a new one.
+
+## When something needs you
+
+Nobody is watching an email arrive the way they watch their own upload, so an item that lands in the Inbox raises a notification for your editors rather than waiting to be noticed.
+
+## Limits
+
+| Limit | Value |
+| --- | --- |
+| Messages per workspace | 60 per hour |
+| Maximum attachment | 50 MB |
+| Attachment types | PDF |
+
+Each forwarded document consumes one extraction from your plan, the same as an upload. Re-classifying a document you already paid for is free.
+
+## Audit trail
+
+Every inbound document records the sending address, the message it arrived on and the routing decision that filed it. A document filed by email is as defensible as one filed by hand, and the evidence of how it got there is part of the record.
