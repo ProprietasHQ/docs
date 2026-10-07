@@ -30,7 +30,7 @@ Navigation is **flat product groups** in `docs.json` (not Overview / Guides / In
 9. Security
 10. Roadmap — three buckets only: **What's live** · **Working on now** · **Further out**. Never claim live what is still planned; flip items only when shipped.
 
-Put feature how-tos under the pillar they belong to. Put shell/UX surfaces under **Using the product**. Match app names where they differ from pillar names (Files, Properties, Work Orders).
+Put feature how-tos under the pillar they belong to. Put shell/UX surfaces under **Using the product**. Match app names where they differ from pillar names (Files, Sites, Units, Work Orders, Inbox).
 
 ## Style
 

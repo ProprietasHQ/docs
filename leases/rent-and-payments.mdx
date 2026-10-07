@@ -3,18 +3,18 @@ title: Rent & Payments
 description: Rent schedules, the payment lifecycle, and overdue tracking.
 ---
 
-When Proprietas reads a lease, it doesn't stop at the term dates — it builds the **rent schedule** and tracks every payment due, in or out.
+When Proprietas reads a lease, it doesn't stop at the term dates. It builds the **rent schedule** and tracks every payment due, in or out.
 
 <Frame>
-  <img src="/images/rent.jpg" alt="The rent view — outgoing and incoming, with due pills and one-click Mark Paid" />
+  <img src="/images/rent.jpg" alt="The rent view, outgoing and incoming, with due pills and one-click Mark Paid" />
 </Frame>
 
 ## Inbound and Outbound
 
 Every lease has a **direction**:
 
-- **Inbound** — you're the tenant; rent goes **out**.
-- **Outbound** — you're the landlord; rent comes **in**.
+- **Inbound**: you're the tenant, so rent goes **out**.
+- **Outbound**: you're the landlord, so rent comes **in**.
 
 The same system handles both, so a managing agent collecting rent and a trust paying ground rent see one consistent rent view.
 
@@ -22,15 +22,35 @@ The same system handles both, so a managing agent collecting rent and a trust pa
 
 From the lease, Proprietas projects a rent schedule:
 
-- **Frequency** — monthly, quarterly (on the UK quarter days: 25 Mar, 24 Jun, 29 Sep, 25 Dec), annual, or a custom cadence
-- **Per-payment amount** — derived from the annual rent
-- **First due date** — anchored on the rent-commencement date, so a rent-free period at the start of a lease doesn't generate phantom early payments
+- **Frequency**: monthly, quarterly (every three months from the lease's rent commencement date), annual, or a custom cadence
+- **Per-payment amount**: derived from the annual rent
+- **First due date**: anchored on the rent commencement date, so a rent-free period at the start of a lease doesn't generate phantom early payments
 
-Payments are materialised ahead of time (about four months out) so upcoming dues are always visible, and the generation is idempotent — re-runs never double up a payment.
+Payments are created ahead of time (about four months out) so upcoming dues are always visible. Re-runs never double up a payment.
+
+The schedule is created as soon as a lease with an annual rent and a rent commencement date is filed. A daily check also catches active leases that have rent but no schedule yet, for example after you add the rent commencement date by hand.
 
 <Note>
-  Payments are never generated for dates before your organisation joined Proprietas. Onboard mid-lease and you won't be greeted by months of historical "overdue" — only what's due from here.
+  Payments are never generated for dates before your organisation joined Proprietas. Onboard mid-lease and you won't be greeted by months of historical "overdue", only what's due from here.
 </Note>
+
+## Paid Automatically
+
+Rent paid by standing order or direct debit doesn't need chasing. Turn on **Paid Automatically** on a schedule and each payment is marked paid on its due date, using the schedule's **Usual Method** if you set one.
+
+You'll find both settings when you add or edit a schedule on a site's **Rent** page. **Paid Automatically** is on by default for rent your organisation pays (inbound) and off for rent it receives (outbound), because rent you receive usually needs checking.
+
+If a payment didn't go through, change its status back to **Unpaid**. Proprietas won't mark it paid again.
+
+## Assumed Paid
+
+When a schedule is added, some payments may already have fallen due between your organisation joining Proprietas and today. These are recorded as **Assumed Paid**, so a new lease doesn't arrive as a wall of arrears.
+
+When Proprietas builds the schedule from a lease you've filed, your editors get an **Earlier Rent Assumed Paid** notification in the [Inbox](/interface/inbox). It opens the site's rent so you can mark any that weren't paid.
+
+When you add a schedule by hand, you choose under **Earlier Payments**: **Assume Paid** (the default) or **Treat as Unpaid** to record arrears.
+
+A payment the system settled shows **Automatic** or **Assumed** next to its paid date in the side panel. Click **Wasn't Paid** to put it back to unpaid.
 
 ## The Payment Lifecycle
 
@@ -46,21 +66,22 @@ Each payment carries one of five settable statuses:
 
 **Overdue is computed, not set.** Any unpaid or invoiced payment past its due date shows as overdue automatically, and clears the moment it's paid or waived. Overdue rent generates its own reminders, refreshed daily until it's dealt with.
 
-Change a status without leaving the grid: hover the status chip and click the caret, or double-click the cell. The same status control lives in the payment's side peek.
+Change a status without leaving the grid: hover the status chip and click the caret, or double-click the cell. The same status control lives in the payment's side panel.
 
-- **Marking Paid is one click.** The paid date, method and any notes live in the side peek, so the quick action stays quick.
+- **Marking Paid is one click.** The paid date, method and any notes live in the side panel, so the quick action stays quick.
 - **Waiving asks for an optional reason**, which is appended to the payment's notes so the write-off explains itself later.
 
-Every status change is **audit-logged**, and the side peek shows an **Activity** trail of those changes: who moved it, from what, to what, and when.
+Every status change is **audit-logged**, and the side panel shows an **Activity** trail of those changes: who moved it, from what, to what, and when.
 
-## The Payment Peek
+## The Payment Side Panel
 
-Click a row and it opens in a **side peek**, the same pattern as [Issues](/facilities/issues) and [Work Orders](/facilities/work-orders), so you never lose your place in the list. The peek carries the Amount, Site, Lease, Schedule, Paid details, Notes and the Activity trail.
+Click a row and it opens in a **side panel** beside the list, the same pattern as [Issues](/facilities/issues) and [Work Orders](/facilities/work-orders), so you never lose your place. The panel carries the Amount, Site, Lease, Schedule, Paid details, Notes and the Activity trail.
 
 ## Working the List
 
 The rent grid works like an inbox:
 
+- **Bulk Mark Paid.** Select rows, open the menu beside **Copy** at the top of the grid and choose **Mark Paid**. Payments that are already settled are skipped, and the confirmation offers **Undo** for a few seconds.
 - **Unread indicators.** A payment nobody in your organisation has opened yet shows a dot, and the **Rent badge in the sidebar** shows the same count. Select rows and use **Mark Read** / **Mark Unread** in the grid's **Actions** menu to clear or restore them in bulk.
 - **Totals in the toolbar.** Outstanding, overdue and the other portfolio totals sit at the top of the grid, so the headline numbers travel with the list.
 - **Export.** Pull the list out as **CSV or JSON** from the **Actions** menu.
@@ -68,6 +89,8 @@ The rent grid works like an inbox:
 ## Rent Reviews and Breaks
 
 Upcoming **rent reviews** and **break dates** surface on the leases dashboard before they catch you out, each linked back to the clause in the original document.
+
+Proprietas sends reminders 90, 60 and 30 days before each break date, rent review and the end of the term. The **Leases Expiring** dashboard block lists term ends and break dates together, soonest first.
 
 <Card title="Deeds & transfers" icon="scroll-text" href="/leases/deeds-and-transfers">
   Variations, assignments, surrenders and TR1 transfers.

@@ -1,9 +1,9 @@
 ---
-title: Keyboard shortcuts
+title: Keyboard Shortcuts
 description: Move through Proprietas without reaching for the mouse.
 ---
 
-Proprietas is built to be fast — and the keyboard is the fastest way through it. Shortcuts stand down while you're typing in an input, textarea or the assistant.
+Proprietas is built to be fast, and the keyboard is the fastest way through it. Shortcuts stand down while you're typing in an input, textarea or the assistant.
 
 ## Global
 
@@ -11,32 +11,33 @@ Proprietas is built to be fast — and the keyboard is the fastest way through i
 | --- | --- |
 | <kbd>Cmd</kbd> <kbd>K</kbd> / <kbd>Ctrl</kbd> <kbd>K</kbd> | Open [universal search](/interface/search) |
 | <kbd>g</kbd> then <kbd>d</kbd> | Go to Dashboard |
-| <kbd>g</kbd> then <kbd>s</kbd> | Go to Properties (sites) |
+| <kbd>g</kbd> then <kbd>s</kbd> | Go to Sites |
 | <kbd>g</kbd> then <kbd>c</kbd> | Go to Compliance |
-| <kbd>g</kbd> then <kbd>w</kbd> | Go to Work orders |
-| <kbd>g</kbd> then <kbd>i</kbd> | Go to Inbox (document intake) |
+| <kbd>g</kbd> then <kbd>w</kbd> | Go to Work Orders |
+| <kbd>g</kbd> then <kbd>i</kbd> | Go to the [Inbox](/interface/inbox) |
 | <kbd>g</kbd> then <kbd>r</kbd> | Go to Rent |
 | <kbd>g</kbd> then <kbd>a</kbd> | Go to the [assistant](/interface/assistant) |
 | <kbd>Esc</kbd> | Close the palette, dialog, or any open panel |
 
 Chord shortcuts (`g` then a letter) wait about a second for the second key. They never fire while a text field is focused.
 
-## In universal search
+## In Universal Search
 
 | Shortcut | Action |
 | --- | --- |
+| <kbd>←</kbd> / <kbd>→</kbd> | Switch type tab |
 | <kbd>↑</kbd> / <kbd>↓</kbd> | Move through results |
 | <kbd>Enter</kbd> | Open the selected result (or "Ask the assistant") |
 | <kbd>P</kbd> | Toggle the preview pane |
 | <kbd>Esc</kbd> | Close search |
 
-## On the dashboard
+## On the Dashboard
 
 Press <kbd>/</kbd> to open the block picker and add a block to your customisable dashboard (ignored while typing in a notes field or other input).
 
-## Data grids
+## Data Grids
 
-The [Issues](/facilities/issues), [Work orders](/facilities/work-orders) and [Assets](/facilities/assets) grids edit like a spreadsheet:
+The [Issues](/facilities/issues), [Work Orders](/facilities/work-orders) and [Assets](/facilities/assets) grids edit like a spreadsheet:
 
 | Shortcut | Action |
 | --- | --- |
@@ -45,23 +46,39 @@ The [Issues](/facilities/issues), [Work orders](/facilities/work-orders) and [As
 | <kbd>Enter</kbd> | Commit the edit and move down |
 | <kbd>Cmd</kbd> <kbd>C</kbd> / <kbd>Ctrl</kbd> <kbd>C</kbd> | Copy the selected cell or range |
 | <kbd>Cmd</kbd> <kbd>V</kbd> / <kbd>Ctrl</kbd> <kbd>V</kbd> | Paste TSV (spreadsheet paste) at the active cell |
-| <kbd>Cmd</kbd> <kbd>Z</kbd> / <kbd>Ctrl</kbd> <kbd>Z</kbd> | Undo — including restoring deleted rows |
+| <kbd>Cmd</kbd> <kbd>Z</kbd> / <kbd>Ctrl</kbd> <kbd>Z</kbd> | Undo, including restoring deleted rows |
 | <kbd>Cmd</kbd> <kbd>Shift</kbd> <kbd>Z</kbd> / <kbd>Ctrl</kbd> <kbd>Y</kbd> | Redo |
 | <kbd>Cmd</kbd> <kbd>F</kbd> / <kbd>Ctrl</kbd> <kbd>F</kbd> | Find in the grid |
-| <kbd>Cmd</kbd> <kbd>O</kbd> / <kbd>Ctrl</kbd> <kbd>O</kbd> | Open the selected / peeked row full-page |
+| <kbd>Cmd</kbd> <kbd>O</kbd> / <kbd>Ctrl</kbd> <kbd>O</kbd> | Open the selected row, or the record in the side panel, as a full page |
 | Drag the fill handle | Fill a value down the column |
 | <kbd>Shift</kbd> <kbd>F</kbd> | Open the filter builder |
 | <kbd>Shift</kbd> <kbd>S</kbd> | Save the current layout as a new view (when it diverges from Default) |
 
-## Floor plans
+## Side Panel
 
-The [plan viewer](/facilities/floor-plans) is a Figma-style canvas — pan, zoom, place assets and draw rooms without leaving the keyboard. Press <kbd>?</kbd> at any time to bring up this legend in-app.
+| Shortcut | Action |
+| --- | --- |
+| <kbd>Cmd</kbd> <kbd>O</kbd> / <kbd>Ctrl</kbd> <kbd>O</kbd> | Expand the record to a full page |
+| <kbd>Esc</kbd> | Close the panel |
+
+## Row Menus
+
+Some rows have a **⋮** menu. While it's open, a single key runs an action:
+
+| Where | Keys |
+| --- | --- |
+| [Inbox](/interface/inbox#working-a-notification) notifications | <kbd>O</kbd> Open, <kbd>U</kbd> Mark as Read / Unread, <kbd>D</kbd> Delete |
+| [Chats](/interface/assistant#managing-chats) in the sidebar | <kbd>R</kbd> Rename, <kbd>D</kbd> Delete |
+
+## Floor Plans
+
+The [plan viewer](/facilities/floor-plans) is a Figma-style canvas. Pan, zoom, place assets and draw rooms without leaving the keyboard. Press <kbd>?</kbd> at any time to bring up this legend in-app.
 
 | Shortcut | Action |
 | --- | --- |
 | <kbd>V</kbd> | Select tool |
 | <kbd>P</kbd> / <kbd>M</kbd> | Place the selected asset as a pin (or open the asset picker) |
-| <kbd>N</kbd> | New asset — then click to drop it on the plan |
+| <kbd>N</kbd> | New asset, then click to drop it on the plan |
 | <kbd>R</kbd> | Draw a rectangle room |
 | <kbd>L</kbd> | Draw a freeform path room |
 | <kbd>O</kbd> | Draw an ellipse room |
@@ -82,9 +99,9 @@ The [plan viewer](/facilities/floor-plans) is a Figma-style canvas — pan, zoom
 
 While reshaping a room path: <kbd>U</kbd> union, <kbd>S</kbd> subtract, <kbd>Cmd</kbd> <kbd>Z</kbd> undo path edit, <kbd>Cmd</kbd> <kbd>Shift</kbd> <kbd>Z</kbd> redo.
 
-## In the desktop app
+## In the Desktop App
 
-The [desktop app](/interface/desktop-app) is tabbed — each tab keeps its own site and state, so you can keep one property open per tab and flip between them.
+The [desktop app](/interface/desktop-app) is tabbed. Each tab keeps its own site and state, so you can keep one site open per tab and flip between them.
 
 | Shortcut | Action |
 | --- | --- |
@@ -98,5 +115,5 @@ The [desktop app](/interface/desktop-app) is tabbed — each tab keeps its own s
 Web shortcuts (<kbd>Cmd</kbd> <kbd>K</kbd>, grids, floor plans) work the same inside each desktop tab.
 
 <Tip>
-  Once a workspace has more than a handful of properties, <kbd>Cmd</kbd> <kbd>K</kbd> is almost always faster than the sidebar. Make it your default way to navigate.
+  Once a workspace has more than a handful of sites, <kbd>Cmd</kbd> <kbd>K</kbd> is almost always faster than the sidebar. Make it your default way to navigate.
 </Tip>

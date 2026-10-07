@@ -1,54 +1,100 @@
 ---
-title: Navigating the app
+title: Navigating the App
 description: How Proprietas is laid out and where everything lives.
 ---
 
-Proprietas has one consistent shell across every authenticated page: a sidebar on the left, a top bar across the top, and the page canvas in the middle. Once you know those three, you know where everything is.
+Proprietas has one consistent shell across every authenticated page: a sidebar on the left, a header across the top of each page, and the page canvas in the middle. Once you know those three, you know where everything is.
 
 <Frame>
-  <img src="/images/dashboard.jpg" alt="The Proprietas app shell — sidebar, topbar and dashboard" />
+  <img src="/images/dashboard.jpg" alt="The Proprietas app shell: sidebar, page header and dashboard" />
 </Frame>
 
-## The sidebar
+## The Sidebar
 
-The left sidebar mirrors how estates teams work day to day. Default groups:
+From top to bottom, the sidebar holds:
+
+1. **The workspace menu**, showing the site you're scoped to (or **All Sites**).
+2. **A search field.** Click it to open [universal search](/interface/search) (<kbd>Cmd</kbd> <kbd>K</kbd>).
+3. **Home, Chat and Inbox.** Home shows the page list below. Chat lists your [assistant chats](/interface/assistant#managing-chats). Inbox shows your recent [notifications and documents to review](/interface/inbox).
+4. **The page list**, grouped the way estates teams work:
 
 | Group | Pages |
 | --- | --- |
 | **Top** | Dashboard |
 | **Operations** | Files, Calendar, Assets, Issues, Work Orders |
-| **Estate** | Properties (with [floor plans](/facilities/floor-plans) per site), Compliance, Rent, Contractors |
+| **Estate** | Sites (with [floor plans](/facilities/floor-plans) per site), Compliance, Rent, Contractors |
 | **Bottom** | Settings |
 
-Entries show a **count badge** when something needs attention: overdue compliance, open issues, unassigned work orders, pending join requests. A badge is a nudge, not noise — it only appears when there's something to act on.
+5. **Your account menu**, at the very bottom. See [Your Account Menu](#your-account-menu).
 
-You can collapse groups and reorder items for your own workspace; Settings stays pinned.
+Entries show a **count badge** when something needs attention: overdue compliance, open issues, open work orders, overdue rent, pending join requests. A badge only appears when there's something to act on.
 
-## Property scope
+You can collapse groups and reorder items for your own workspace. Settings stays pinned.
 
-The single most important control is the **property switcher** in the top bar. Proprietas is portfolio-wide by default, but pick a property and the whole app narrows to it — every list, every status, every report. Your choice persists across reloads, so you can work inside one site for as long as you need, then clear it to go back to the whole portfolio.
+## Sites and Units
+
+A **Site** is a building or location you're responsible for. A **Unit** is a leasable space inside a multi-unit site, such as a floor or a shop. The sidebar entry is **Sites**. See [Sites & scope](/getting-started/properties-and-scope).
+
+## Site Scope
+
+Proprietas is portfolio-wide by default. Pick a site from the workspace menu at the top of the sidebar, or from the first item in the page header, and the whole app narrows to it: every list, every status, every report. Your choice persists across reloads, so you can work inside one site for as long as you need, then choose **All Sites** to go back to the whole portfolio.
+
+The page header shows the site's name while a scope is active.
 
 <Note>
-  When you see a number that surprises you, check the property scope first — you may be looking at one site rather than the whole portfolio, or vice versa.
+  When a number surprises you, check the scope first. You may be looking at one site rather than the whole portfolio, or the other way round.
 </Note>
 
-A clear **scope banner** under the page title shows when a scope is active.
+## Your Account Menu
 
-## The top bar
+Click your name at the bottom of the sidebar to open the account menu:
 
-The top bar carries the property switcher, universal [search](/interface/search), the [assistant](/interface/assistant), and your notifications bell. Notifications cover the things that can't wait — a compliance deadline approaching, a new issue reported, a member requesting access.
+- **Settings**
+- **Members**
+- **Billing**
+- **Give Feedback**
+- **Get Help**, which opens these docs
+- **Sign Out**
+
+Next to your name, a button links to the [desktop app](/interface/desktop-app) download. It's hidden when you're already in the desktop app.
+
+## The Inbox
+
+Notifications and documents waiting for review share one [Inbox](/interface/inbox). Open it from the Inbox icon in the sidebar.
 
 ## Calendar
 
-**Calendar** (under Operations) is the in-app month view for compliance deadlines, lease breaks and reviews, rent, and scheduled work — colour-coded by overdue, due soon and upcoming. To mirror those dates into Apple, Google or Outlook, see [Calendar sync](/interface/calendar-sync).
+**Calendar** (under Operations) is the in-app month view for compliance deadlines, lease breaks and reviews, rent, and scheduled work, colour-coded by overdue, due soon and upcoming. To mirror those dates into Apple, Google or Outlook, see [Calendar sync](/interface/calendar-sync).
 
-## Lists and data grids
+## Lists and Data Grids
 
-The high-volume surfaces — [Issues](/facilities/issues), [Work orders](/facilities/work-orders) and [Assets](/facilities/assets) — are **spreadsheet-style data grids**. They share one toolbar (filter, sort, search and saved views), keep their header and toolbar frozen while the rows scroll, and support inline edit and keyboard navigation (see [Keyboard shortcuts](/interface/keyboard-shortcuts#data-grids)). Universal search and the assistant can drop you straight into one of these grids **pre-filtered** to the rows you asked for.
+The high-volume surfaces, [Issues](/facilities/issues), [Work Orders](/facilities/work-orders) and [Assets](/facilities/assets), are **spreadsheet-style data grids**. They share one toolbar (filter, sort, search and saved views), keep their header and toolbar frozen while the rows scroll, and support inline edit and keyboard navigation (see [Keyboard shortcuts](/interface/keyboard-shortcuts#data-grids)). Universal search and the assistant can drop you straight into one of these grids **pre-filtered** to the rows you asked for.
+
+The Issues and Work Orders grids end with a **+ New Issue** or **+ New Work Order** row, so you can add a record without leaving the list. See [Logging an Issue Yourself](/facilities/issues#logging-an-issue-yourself).
+
+## The Side Panel
+
+Click a row and the record opens in a **side panel** beside the list, so the list stays in view. The panel's header shows the record's name and type, with two buttons:
+
+| Button | Key | Does |
+| --- | --- | --- |
+| **Expand** | <kbd>Cmd</kbd> <kbd>O</kbd> | Opens the record as a full page |
+| **Close** | <kbd>Esc</kbd> | Closes the panel |
 
 ## Settings
 
-Everything administrative lives under **Settings**: organisation profile, members and invitations, single sign-on and verified domains, billing and AI usage, calendar subscriptions, MCP connectors, and notification preferences. Admin-only sections are clearly marked and hidden from non-admins.
+Everything administrative lives under **Settings**: your account, organisation profile, members and invitations, single sign-on and verified domains, billing and AI usage, calendar subscriptions, MCP connectors, and notification preferences. Admin-only sections are clearly marked and hidden from non-admins. Settings also links to the [Audit Log](/security/audit-trail#in-the-app).
+
+Settings opens as a panel over the dashboard. Each panel has its own link, so you can bookmark it or send it to a colleague: `/settings/<panel>` opens that panel. For example:
+
+| Link | Opens |
+| --- | --- |
+| `/settings/members` | Members |
+| `/settings/billing` | Billing |
+| `/settings/notifications` | Notifications |
+| `/settings/security` | Security |
+
+An unrecognised panel name opens **Your Account**.
 
 <Columns cols={2}>
   <Card title="Universal search" icon="search" href="/interface/search">

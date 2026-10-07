@@ -73,6 +73,7 @@
           "facilities/work-orders",
           "facilities/assets",
           "facilities/floor-plans",
+          "facilities/utilities",
           "facilities/contractors",
           "facilities/contractor-portal"
         ]
@@ -84,7 +85,7 @@
           "interface/navigating",
           "interface/search",
           "interface/assistant",
-          "interface/notifications",
+          "interface/inbox",
           "interface/keyboard-shortcuts",
           "interface/calendar-sync",
           "interface/desktop-app",
@@ -125,6 +126,12 @@
       }
     ]
   },
+  "redirects": [
+    {
+      "source": "/interface/notifications",
+      "destination": "/interface/inbox"
+    }
+  ],
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"

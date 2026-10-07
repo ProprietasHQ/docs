@@ -14,7 +14,7 @@ Proprietas has one front door for documents: **drop it and walk away.** Drag a P
 Drag a file onto any page in the app — a full-screen drop zone appears and the document is taken in. You don't pre-sort into folders; the parser works out what it is:
 
 - A gas certificate files against that site's gas-safety obligation
-- A lease files against the property and builds its rent schedule
+- A lease files against the site or unit and builds its rent schedule
 - An FRA files and surfaces its findings
 - An insurance certificate, F-Gas, TM44, asbestos survey, fire-alarm or emergency-lighting report — same drop-and-go
 
@@ -22,12 +22,12 @@ For scanned PDFs, the overlay shows a **real page-by-page reading progress bar**
 
 ## The Inbox
 
-When the parser is confident, the document lands in its final home. When it isn't — a low-confidence statutory date, an address it can't pin to one site, a document type it wants you to confirm — it lands in the **Inbox** for a quick human check.
+When the parser is confident, the document lands in its final home. When it isn't, because of a low-confidence statutory date, an address it can't pin to one site, or a document type it wants you to confirm, it lands in the [Inbox](/interface/inbox) for a quick human check. Documents waiting for you lead the **All** tab, and the **Needs Review** tab shows only them.
 
 In the Inbox you confirm or correct:
 
 - The **document kind**
-- The **site / property** it belongs to
+- The **site / unit** it belongs to
 - The **obligation** it satisfies (for certificates)
 
 Then accept it, and it files. Reject it and it's discarded — though the record is kept for the audit trail.
@@ -36,9 +36,9 @@ Then accept it, and it files. Reject it and it's discarded — though the record
   This is deliberate. Statutory-compliance dates (FRA, gas, EICR expiry) are never filed automatically below a confidence bar — getting a fire-safety date wrong is exactly the failure we won't accept. Low-confidence items wait for you.
 </Note>
 
-## Multi-Property Detection
+## Multi-Unit Detection
 
-If a single PDF contains text matching several of your properties — a certificate covering a whole building, say — the Inbox flags it so you can split it to the right floors rather than filing it against the wrong one.
+If a single PDF contains text matching several of your units, such as a certificate covering a whole building, the Inbox flags it so you can split it to the right floors rather than filing it against the wrong one.
 
 ## Smart Renaming
 

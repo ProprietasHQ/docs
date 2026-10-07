@@ -3,7 +3,7 @@ title: Work Orders
 description: Schedule, tender, cost and close out contractor work.
 ---
 
-A work order is a unit of work assigned to a contractor — a repair, a service, a compliance renewal. Proprietas tracks it from raised to paid.
+A work order is a unit of work assigned to a contractor: a repair, a service, a compliance renewal. Proprietas tracks it from raised to paid.
 
 <Frame>
   <video src="/images/work-orders.mp4" autoPlay loop muted playsInline className="rounded-xl" />
@@ -11,38 +11,58 @@ A work order is a unit of work assigned to a contractor — a repair, a service,
 
 ## Where Work Orders Come From
 
-- **Raised by hand** for any task
+- **Raised by hand** from the Work Orders list, for any task (see below)
 - **Promoted from an [issue](/facilities/issues)** when a reported problem needs work
 - **Raised automatically** at the 7-day compliance threshold to renew a lapsing certificate (see [Reminders](/compliance/reminders))
 - **Raised on cadence** by a [PPM schedule](/compliance/planned-maintenance)
 
+## Raising a Work Order by Hand
+
+Editors can raise a work order straight from the list, without an issue or a compliance finding behind it.
+
+<Steps>
+  <Step title="Start a new row">
+    Click **+ New Work Order** at the bottom of the Work Orders grid. You can also choose **New Work Order** from the quick actions in [Cmd K](/interface/search#before-you-type), which takes you straight to that row.
+  </Step>
+  <Step title="Type a title">
+    Type what needs doing and press <kbd>Enter</kbd>.
+  </Step>
+  <Step title="Pick a site">
+    Choose the site. If you're scoped to one site, it's already filled in.
+  </Step>
+</Steps>
+
+The work order saves as soon as it has a title and a site, and opens in the [side panel](/interface/navigating#the-side-panel) beside the list so you can add the rest. If your current filters would hide the new work order, a message tells you and offers **Open**.
+
+## Numbers and Statuses
+
 Each carries a number (WO-0001), title, priority (low / medium / high / **emergency**) and status: **Open → Scheduled → In progress → On hold → Completed / Cancelled**.
 
 <Note>
-  The work-order list is a **spreadsheet-style data grid** — shared with [Issues](/facilities/issues) and [Assets](/facilities/assets). Filter, sort and search from a fixed toolbar, save views, and the header stays frozen while the rows scroll. Search and the [assistant](/interface/assistant) can open it pre-filtered via **Open in grid**.
+  The work-order list is a **spreadsheet-style data grid**, shared with [Issues](/facilities/issues) and [Assets](/facilities/assets). Filter, sort and search from a fixed toolbar, save views, and the header stays frozen while the rows scroll. Search and the [assistant](/interface/assistant) can open it pre-filtered via **Open in grid**.
 </Note>
 
 ## Competence Gating
 
-When you assign a contractor, Proprietas checks their competence certificates (Gas Safe, NICEIC, SafeContractor, CHAS). If one has expired, the assignment can be **blocked until it's refreshed** — so an out-of-ticket contractor never ends up on a gas job. See [Contractors](/facilities/contractors).
+When you assign a contractor, Proprietas checks their competence certificates (Gas Safe, NICEIC, SafeContractor, CHAS). If one has expired, the assignment can be **blocked until it's refreshed**, so an out-of-ticket contractor never ends up on a gas job. See [Contractors](/facilities/contractors).
 
 ## Tendering and Quotes
 
-For organisations that need competitive quotes — charity trustees and MATs often do — a work order can require a **minimum number of quotes** before it's accepted. Contractors submit quotes; you accept one. Accepting below the quote threshold requires a written override reason, which is recorded.
+For organisations that need competitive quotes, as charity trustees and MATs often do, a work order can require a **minimum number of quotes** before it's accepted. Contractors submit quotes; you accept one. Accepting below the quote threshold requires a written override reason, which is recorded.
 
 Multiple quotes live on the work order, with one accepted at a time; a superseded quote stays in the history.
 
 ## Payments
 
-Log payments against a work order — deposit, milestone, final — each with amount, method, reference and an optional invoice. Payments can be voided without losing the audit history, so the financial trail is always intact.
+Log payments against a work order (deposit, milestone, final), each with amount, method, reference and an optional invoice. Payments can be voided without losing the audit history, so the financial trail is always intact.
 
 ## Conversation
 
-Every work order carries a **threaded conversation** between your team and the assigned contractor. Comments appear in the work order's side peek and detail page on your side, and in the [contractor portal](/facilities/contractor-portal) on theirs, so "when can you attend?" and the answer live on the job itself instead of in someone's inbox. New replies arrive in [real time](/interface/notifications#live-in-the-app).
+Every work order carries a **threaded conversation** between your team and the assigned contractor. Comments appear in the work order's side panel and full page on your side, and in the [contractor portal](/facilities/contractor-portal) on theirs, so "when can you attend?" and the answer live on the job itself instead of in someone's inbox. New replies arrive in [real time](/interface/inbox#live-in-the-app).
 
 ## Closing the Loop
 
-When work is done, the contractor marks it complete — often through the [portal](/facilities/contractor-portal) — uploads any certificate or report, and the linked issue or obligation updates. Every status change and comment is logged.
+When work is done, the contractor marks it complete, often through the [portal](/facilities/contractor-portal), uploads any certificate or report, and the linked issue or obligation updates. Every status change and comment is logged.
 
 <Card title="The contractor portal" icon="hard-hat" href="/facilities/contractor-portal">
   How contractors do all this without an account.
